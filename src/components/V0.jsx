@@ -53,17 +53,16 @@ const projects = [
     techStack: ["React", "Tailwind", "Solidity", "Web3"],
     githubUrl: "https://github.com/rachitdhaka/EthLink",
   },
-  
+
   {
-      id: 4,
-      name: "Weather App",
-      detail:
-        "Weather App - Get the current weather of any city in the world",
-      logo: weather,
-      url: "https://weather-rachit.vercel.app/",
-      techStack: ["React", "Tailwind" , "Api"],
-      githubUrl: "https://github.com/rachitdhaka/Weather-Application",
-    },
+    id: 4,
+    name: "Weather App",
+    detail: "Weather App - Get the current weather of any city in the world",
+    logo: weather,
+    url: "https://weather-rachit.vercel.app/",
+    techStack: ["React", "Tailwind", "Api"],
+    githubUrl: "https://github.com/rachitdhaka/Weather-Application",
+  },
 ];
 
 const exp = [
@@ -231,9 +230,16 @@ const V0 = () => {
             ease: "easeInOut",
           }}
         >
-          <h1 className="text-white font-semibold text-lg sm:text-xl mt-8 mb-4">
-            Projects
-          </h1>
+          <div className=" flex justify-between ">
+            <div className="text-white font-semibold text-lg sm:text-xl mt-8 mb-4">
+              Projects
+            </div>
+            <div className="font-saans mt-8 mb-4">
+              <NavLink to="/projects" className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded ">
+                View All
+              </NavLink>
+            </div>
+          </div>
 
           <div className="flex justify-center">
             {/* Adjusted grid for responsiveness: 1 column on small, 2 on medium and up */}
@@ -252,17 +258,6 @@ const V0 = () => {
             </div>
           </div>
         </motion.div>
-
-        <div>
-          <div className="font-saans flex gap-3 justify-center pt-8 hover:scale-110 duration-300">
-            <NavLink
-              to="/projects"
-              className="text-[12px] text-white sm:text-sm font-medium font-saans hover:bg-neutral-700 px-2 rounded"
-            >
-              View All Projects
-            </NavLink>
-          </div>
-        </div>
 
         {/* Get in touch */}
         <motion.div
@@ -315,11 +310,7 @@ const V0 = () => {
           </div>
         </motion.div>
 
-        <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10">
-          <NavLink to="/version1" className="duration-300">
-            Version 1
-          </NavLink>
-        </div>
+        <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10"></div>
       </div>
     </div>
   );
