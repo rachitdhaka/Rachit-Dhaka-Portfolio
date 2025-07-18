@@ -7,6 +7,7 @@ import game from "../assets/Images/game.png";
 import V0projectCard from "../components/V0projectCard";
 import HeikiBackground from "../components/HeikiBackground";
 import chatbot from "../assets/Images/chatbot.png";
+import weather from "../assets/Images/weather.png";
 const projects = [
   {
     id: 1,
@@ -53,7 +54,7 @@ const projects = [
     name: "Weather App",
     detail:
       "Weather App - Get the current weather of any city in the world",
-    logo: paste,
+    logo: weather,
     url: "https://weather-rachit.vercel.app/",
     techStack: ["React", "Tailwind" , "Api"],
     githubUrl: "https://github.com/rachitdhaka/Weather-Application",
