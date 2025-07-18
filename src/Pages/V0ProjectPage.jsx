@@ -7,6 +7,7 @@ import game from "../assets/Images/game.png";
 import V0projectCard from "../components/V0projectCard";
 import HeikiBackground from "../components/HeikiBackground";
 import weather from "../assets/Images/weather.png";
+import chatbot from "../assets/chatbot application.png";
 const projects = [
   {
     id: 1,
@@ -63,7 +64,7 @@ const projects = [
     name: "Chat Bot Application",
     detail:
       "Chat Bot Application - Using Google AI to create a chat bot application",
-    logo: weather,
+    logo: chatbot,
     url: "https://chatbot-rachit.vercel.app/",
     techStack: ["React", "Tailwind" , "Api" , "Google AI"],
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
