@@ -33,6 +33,7 @@ const projects = [
     techStack: ["React", "Tailwind", "Redux"],
     githubUrl: "https://github.com/rachitdhaka/Paste-Application",
   },
+  
   {
     id: 2,
     name: "Orbit Us",
