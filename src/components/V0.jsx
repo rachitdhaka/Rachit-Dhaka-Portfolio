@@ -21,7 +21,7 @@ import V0Github from "./V0Github";
 import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
-import chatbot from "../assets/Images/chatbot.png";
+import chatbot from "../assets/images/chatbot.png";
 const projects = [
   {
     id: 1,
