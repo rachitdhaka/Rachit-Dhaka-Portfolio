@@ -21,7 +21,7 @@ import V0Github from "./V0Github";
 import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
-import chatbot from "../assets/images/chatbot.png";
+
 const projects = [
   {
     id: 1,
@@ -60,7 +60,7 @@ const projects = [
     name: "Chat Bot Application",
     detail:
       "Chat Bot Application - Using Google AI to create a chat bot application",
-    logo: chatbot,
+    logo: weather,
     url: "https://chatbot-rachit.vercel.app/",
     techStack: ["React", "Tailwind", "Api", "Google AI"],
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
