@@ -21,7 +21,7 @@ import V0Github from "./V0Github";
 import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
-
+import chatbot from "../assets/Images/chatbot.png";
 const projects = [
   {
     id: 1,
@@ -56,12 +56,13 @@ const projects = [
 
   {
     id: 4,
-    name: "Weather App",
-    detail: "Weather App - Get the current weather of any city in the world",
-    logo: weather,
-    url: "https://weather-rachit.vercel.app/",
-    techStack: ["React", "Tailwind", "Api"],
-    githubUrl: "https://github.com/rachitdhaka/Weather-Application",
+    name: "Chat Bot Application",
+    detail:
+      "Chat Bot Application - Using Google AI to create a chat bot application",
+    logo: chatbot,
+    url: "https://chatbot-rachit.vercel.app/",
+    techStack: ["React", "Tailwind", "Api", "Google AI"],
+    githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
   },
 ];
 
@@ -235,7 +236,10 @@ const V0 = () => {
               Projects
             </div>
             <div className="font-saans mt-8 mb-4">
-              <NavLink to="/projects" className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded ">
+              <NavLink
+                to="/projects"
+                className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
+              >
                 View All
               </NavLink>
             </div>
