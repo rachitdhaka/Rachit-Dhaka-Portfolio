@@ -10,7 +10,7 @@ import {
   IconBrandLinkedin,
   IconCode,
 } from "@tabler/icons-react";
-import V0projectCard from "./V0projectCard"; // This component needs careful attention for responsiveness
+import V0projectCard from "./V0projectCard"; 
 import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
 import paste from "../assets/Images/paste.png";
@@ -33,7 +33,7 @@ const projects = [
     techStack: ["React", "Tailwind", "Redux"],
     githubUrl: "https://github.com/rachitdhaka/Paste-Application",
   },
-  
+
   {
     id: 2,
     name: "Orbit Us",
