@@ -14,6 +14,7 @@ import V0projectCard from "./V0projectCard";
 import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
 import paste from "../assets/Images/paste.png";
+import chatbot from "../assets/chatbot application.png";
 import game from "../assets/Images/game.png";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
@@ -60,7 +61,7 @@ const projects = [
     name: "Chat Bot Application",
     detail:
       "Chat Bot Application - Using Google AI to create a chat bot application",
-    logo: weather,
+    logo: chatbot,
     url: "https://chatbot-rachit.vercel.app/",
     techStack: ["React", "Tailwind", "Api", "Google AI"],
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
