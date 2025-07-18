@@ -57,6 +57,16 @@ const projects = [
     techStack: ["React", "Tailwind" , "Api"],
     githubUrl: "https://github.com/rachitdhaka/Weather-Application",
   },
+  {
+    id: 6,
+    name: "Chat Bot Application",
+    detail:
+      "Chat Bot Application - Using Google AI to create a chat bot application",
+    logo: paste,
+    url: "https://chatbot-rachit.vercel.app/",
+    techStack: ["React", "Tailwind" , "Api" , "Google AI"],
+    githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
+  },
   
 ];
 
