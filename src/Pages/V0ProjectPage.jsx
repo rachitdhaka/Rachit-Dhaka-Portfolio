@@ -37,7 +37,7 @@ const projects = [
     detail:
       "",
     logo: reactRef,
-    url: "https://chatbot-rachit.vercel.app/",
+    url: "https://reactref.vercel.app/",
     techStack: ["React", "Tailwind" ],
     githubUrl: "https://github.com/rachitdhaka/React-Ref",
   },
