@@ -66,6 +66,16 @@ const projects = [
     techStack: ["React", "Tailwind", "Api", "Google AI"],
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
   },
+  {
+      id: 5,
+      name: "React Ref Website",
+      detail:
+        "",
+      logo: reactRef,
+      url: "https://chatbot-rachit.vercel.app/",
+      techStack: ["React", "Tailwind" ],
+      githubUrl: "https://github.com/rachitdhaka/React-Ref",
+    },
 ];
 
 const exp = [

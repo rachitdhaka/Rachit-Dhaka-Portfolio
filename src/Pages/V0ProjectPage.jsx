@@ -8,6 +8,7 @@ import V0projectCard from "../components/V0projectCard";
 import HeikiBackground from "../components/HeikiBackground";
 import weather from "../assets/Images/weather.png";
 import chatbot from "../assets/chatbot application.png";
+import reactRef from "../assets/Images/ReactRef.png";
 const projects = [
   {
     id: 1,
@@ -29,6 +30,17 @@ const projects = [
     techStack: ["React", "Tailwind", "Solidity", "Web3"],
     githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
   },
+  {
+    id: 7,
+    name: "React Ref Website",
+    detail:
+      "",
+    logo: reactRef,
+    url: "https://chatbot-rachit.vercel.app/",
+    techStack: ["React", "Tailwind" ],
+    githubUrl: "https://github.com/rachitdhaka/React-Ref",
+  },
+  
   {
     id: 3,
     name: "Eth Link",
@@ -69,7 +81,6 @@ const projects = [
     techStack: ["React", "Tailwind" , "Api" , "Google AI"],
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
   },
-  
 ];
 
 const V0ProjectPage = () => {
