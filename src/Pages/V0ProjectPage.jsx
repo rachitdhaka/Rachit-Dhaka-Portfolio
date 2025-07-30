@@ -8,7 +8,8 @@ import V0projectCard from "../components/V0projectCard";
 import HeikiBackground from "../components/HeikiBackground";
 import weather from "../assets/Images/weather.png";
 import chatbot from "../assets/chatbot application.png";
-import reactRef from "../assets/Images/ReactRef.png";
+import reactRef from "../assets/Images/reactRef.png";
+
 const projects = [
   {
     id: 1,

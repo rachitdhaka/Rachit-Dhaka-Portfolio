@@ -22,7 +22,7 @@ import V0Github from "./V0Github";
 import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
-
+import reactRef from "../assets/Images/reactRef.png";
 const projects = [
   {
     id: 1,
