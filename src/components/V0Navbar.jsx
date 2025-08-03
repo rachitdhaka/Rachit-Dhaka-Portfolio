@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  Github,
+  Code,
+  Briefcase,
+  
+} from "lucide-react";
 
 const V0Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,16 +63,30 @@ const V0Navbar = () => {
               to="/projects"
               className="text-[12px] sm:text-[14px] font-medium font-saans"
             >
-              Projects
+              <div className="py-1">
+                <Briefcase
+                  size={20}
+                  color="#ffffff"
+                  strokeWidth={1.5}
+                  className="hover:text-gray-300 "
+                />
+              </div>
             </NavLink>
           </div>
           <div className="hover:bg-neutral-700 px-2 py-0.5 rounded">
             <a
               href="https://github.com/rachitdhaka"
               target="_blank"
-              className="text-[12px] sm:text-[14px] font-medium font-saans"
+              className="text-[12px] sm:text-[14px] font-medium font-saans "
             >
-              Github
+              <div className="py-1">
+                <Github
+                  size={20}
+                  color="#ffffff"
+                  strokeWidth={1.5}
+                  className="hover:text-gray-300 "
+                />
+              </div>
             </a>
           </div>
           <div className="hover:bg-neutral-700 px-2 py-0.5 rounded">
@@ -75,7 +95,14 @@ const V0Navbar = () => {
               target="_blank"
               className="text-[12px] sm:text-[14px] font-medium font-saans"
             >
-              Leetcode
+              <div className="py-1">
+                <Code
+                  size={20}
+                  color="#ffffff"
+                  strokeWidth={1.5}
+                  className="hover:text-gray-300 "
+                />
+              </div>
             </a>
           </div>
         </div>
