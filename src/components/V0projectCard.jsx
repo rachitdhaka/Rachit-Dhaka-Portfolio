@@ -10,7 +10,7 @@ const V0projectCard = ({
 }) => {
   return (
     <section>
-      <div className="border border-neutral-800 rounded-xl flex flex-col w-full max-w-xs sm:max-w-sm mx-auto bg-neutral-950">
+      <div className="border border-neutral-800 rounded-xl flex flex-col w-full max-w-xs sm:max-w-sm mx-auto bg-neutral-950 hover:bg-neutral-800 transition-colors duration-400 ">
         <div className="p-2">
           <a href={url} target="_blank" >
             <img
