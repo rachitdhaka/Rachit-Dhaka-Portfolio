@@ -86,17 +86,10 @@ const projects = [
 
 const V0ProjectPage = () => {
   return (
-    
-      
-      <section className="bg-black min-h-screen w-full p-5 relative">
-        <HeikiBackground
-        primaryColor="#ededed"
-        backgroundColor = "#0a0a0a"
-        
-        pattern="grid"
-        density="dense"
-        opacity={0.2}
-      />
+
+
+      <section className="min-h-screen w-full p-5 relative">
+
         {/* Project section */}
         <section className="max-w-3xl mx-auto bg-neutral-950 p-5 rounded-4xl relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">

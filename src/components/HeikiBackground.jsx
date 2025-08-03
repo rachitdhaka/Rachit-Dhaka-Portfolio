@@ -72,7 +72,7 @@ const HeikiBackground = ({
 
   return (
     <div
-      className="absolute inset-0 w-full h-full overflow-hidden"
+      className="fixed inset-0 w-full h-full overflow-hidden"
       style={{ backgroundColor }}
     >
       {/* Pattern: either grid or blocks */}

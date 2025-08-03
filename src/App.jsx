@@ -64,7 +64,7 @@ function App() {
         density="dense"
         opacity={0.2}
       />
-      <div className="relative">
+      <div className="relative ">
         <RouterProvider router={router} />
       </div>
     </div>
