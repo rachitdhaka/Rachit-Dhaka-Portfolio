@@ -12,7 +12,7 @@ const V0Navbar = () => {
 
   return (
     <section className="">
-      <section className="text-white max-w-2xl mx-auto px-14 flex justify-between items-center pt-5 md:h-12 relative">
+      <section className="text-white max-w-2xl  mx-auto px-14 flex justify-between items-center pt-15 md:h-12 relative">
         {/* Left Side: Logo */}
         <div>
           <NavLink
@@ -58,7 +58,7 @@ const V0Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-2">
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded">
+          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
             <NavLink
               to="/projects"
               className="text-[12px] sm:text-[14px] font-medium font-saans"
@@ -72,8 +72,15 @@ const V0Navbar = () => {
                 />
               </div>
             </NavLink>
+            {/* Tooltip */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              Projects
+            </div>
+
+
+
           </div>
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded">
+          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
             <a
               href="https://github.com/rachitdhaka"
               target="_blank"
@@ -88,8 +95,12 @@ const V0Navbar = () => {
                 />
               </div>
             </a>
+            {/* Tooltip */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              GitHub
+            </div>
           </div>
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded">
+          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
             <a
               href="https://leetcode.com/u/rachitdhaka/"
               target="_blank"
@@ -104,6 +115,10 @@ const V0Navbar = () => {
                 />
               </div>
             </a>
+            {/* Tooltip */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+              LeetCode
+            </div>
           </div>
         </div>
       </section>

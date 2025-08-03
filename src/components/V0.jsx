@@ -326,7 +326,18 @@ const V0 = () => {
           </div>
         </motion.div>
 
-        <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10"></div>
+        <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10">
+          <NavLink
+                to="/version1"
+                className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
+              >
+                Version 1
+              </NavLink>
+        </div>
+
+
+
+        
       </div>
     </div>
   );
