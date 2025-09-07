@@ -163,6 +163,8 @@ const V1 = () => {
         <hr className="border-gray-200 my-1" />
       </div>
 
+     
+
       {/* Projects section */}
       <ProjectCard />
 

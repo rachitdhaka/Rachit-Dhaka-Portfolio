@@ -10,7 +10,7 @@ import {
   IconBrandLinkedin,
   IconCode,
 } from "@tabler/icons-react";
-import V0projectCard from "./V0projectCard"; 
+import V0projectCard from "./V0projectCard";
 import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
 import paste from "../assets/Images/paste.png";
@@ -23,6 +23,8 @@ import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
 import reactRef from "../assets/Images/ReactRef.png";
+import resume from "../assets/resume/resume.pdf";
+
 const projects = [
   {
     id: 1,
@@ -67,15 +69,14 @@ const projects = [
     githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
   },
   {
-      id: 5,
-      name: "React Ref Website",
-      detail:
-        "",
-      logo: reactRef,
-      url: "https://reactref.vercel.app/",
-      techStack: ["React", "Tailwind" ],
-      githubUrl: "https://github.com/rachitdhaka/React-Ref",
-    },
+    id: 5,
+    name: "React Ref Website",
+    detail: "",
+    logo: reactRef,
+    url: "https://reactref.vercel.app/",
+    techStack: ["React", "Tailwind"],
+    githubUrl: "https://github.com/rachitdhaka/React-Ref",
+  },
 ];
 
 const exp = [
@@ -161,7 +162,7 @@ const V0 = () => {
         {/* about section */}
         {/* Adjusted padding */}
         <motion.div
-          className="px-4 sm:px-8 mt-4 sm:mt-0"
+          className="px-4 sm:px-8 mt-4 sm:mt-0 flex flex-col gap-2"
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           transition={{
@@ -169,26 +170,37 @@ const V0 = () => {
             ease: "easeInOut",
           }}
         >
-          <h1 className="text-white font-semibold text-lg sm:text-xl mb-2">
-            About
-          </h1>
-          <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
-            Mentor{" "}
-            <a
-              href="https://gfgsrmrmp.vercel.app/"
-              className="text-neutral-50 underline "
-            >
-              Geeks For Geeks SRM RMP
-            </a>{" "}
-            | Building{" "}
-            <a
-              href="https://vartalaappodcast.vercel.app/"
-              className=" text-neutral-50 underline"
-            >
-              Vartalaap
-            </a>{" "}
-            – A Platform for Powerful Voices
-          </p>
+          <div>
+            <h1 className="text-white font-semibold text-lg sm:text-xl mb-2">
+              About
+            </h1>
+            <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
+              Mentor{" "}
+              <a
+                href="https://gfgsrmrmp.vercel.app/"
+                className="text-neutral-50 underline "
+              >
+                Geeks For Geeks SRM RMP
+              </a>{" "}
+              | Building{" "}
+              <a
+                href="https://vartalaappodcast.vercel.app/"
+                className=" text-neutral-50 underline"
+              >
+                Vartalaap
+              </a>{" "}
+              – A Platform for Powerful Voices
+            </p>
+            <br />
+            <a 
+            href={resume}
+            download="Rachit_Dhaka_Resume.pdf"
+            className="text-neutral-400 tracking-tight text-sm sm:text-base hover:text-white pointer cursor hover:bg-neutral-700 hover:rounded px-2 py-0.5">
+              Download Resume
+             </a>
+          </div>
+
+         
         </motion.div>
 
         {/* Experience */}
@@ -328,16 +340,12 @@ const V0 = () => {
 
         <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10">
           <NavLink
-                to="/version1"
-                className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
-              >
-                Version 1
-              </NavLink>
+            to="/version1"
+            className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
+          >
+            Version 1
+          </NavLink>
         </div>
-
-
-
-        
       </div>
     </div>
   );
