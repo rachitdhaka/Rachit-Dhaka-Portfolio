@@ -107,6 +107,19 @@ const exp = [
 ];
 
 const V0 = () => {
+
+  const dob = new Date("2004-09-29"); 
+  const today = new Date();
+
+ 
+  let age = today.getFullYear() - dob.getFullYear();
+  const monthDiff = today.getMonth() - dob.getMonth();
+  const dayDiff = today.getDate() - dob.getDate();
+
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
   return (
     <div className="w-full min-h-screen relative">
       {/* main section */}
@@ -153,7 +166,7 @@ const V0 = () => {
                 Rachit Dhaka
               </h1>
               <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
-                20, Chennai | Developer - Problem Solver
+                {age}, Chennai | Developer - Problem Solver
               </p>
             </motion.div>
           </div>
