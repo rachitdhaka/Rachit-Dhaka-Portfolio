@@ -1,23 +1,38 @@
 import React from "react";
 
 const skills = [
-  "html",
-  "css",
-  "javascript",
+  // 🧠 Core Programming
+  "cpp",
+  "c",
+  "python",
+
+  // ⚙️ MERN Stack
   "react",
+  "express",
+  "nodejs",
+  "mongodb",
+
+  // 🎨 Frontend Styling & Tools
+  "javascript",
+  "typescript",
   "tailwind",
   "redux",
-  "typescript",
-  "python",
-  "cpp",
+  "html",
+  "css",
+
+  // 🛠️ Dev Tools
   "git",
   "github",
   "vscode",
-  "c",
   "vite",
   "vercel",
+  "postman",
+  "bash",
+
+  // 🗃️ Database / Others
   "mysql",
 ];
+
 
 const V0skills = () => {
   return (
