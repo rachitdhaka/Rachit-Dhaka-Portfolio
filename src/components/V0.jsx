@@ -108,10 +108,10 @@ const exp = [
 
 const V0 = () => {
 
-  const dob = new Date("2004-09-29"); 
+  const dob = new Date("2004-09-29");
   const today = new Date();
 
- 
+
   let age = today.getFullYear() - dob.getFullYear();
   const monthDiff = today.getMonth() - dob.getMonth();
   const dayDiff = today.getDate() - dob.getDate();
@@ -166,7 +166,7 @@ const V0 = () => {
                 Rachit Dhaka
               </h1>
               <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
-                {age}, Chennai | Developer - Problem Solver
+                {age}, Chennai | Full Stack Developer - Problem Solver
               </p>
             </motion.div>
           </div>
@@ -205,7 +205,7 @@ const V0 = () => {
               – A Platform for Powerful Voices
             </p>
             <br />
-            <a 
+            <a
             href={resume}
             download="Rachit_Dhaka_Resume.pdf"
             className="text-neutral-400 tracking-tight text-sm sm:text-base hover:text-white pointer cursor hover:bg-neutral-700 hover:rounded px-2 py-0.5">
@@ -213,7 +213,7 @@ const V0 = () => {
              </a>
           </div>
 
-         
+
         </motion.div>
 
         {/* Experience */}
