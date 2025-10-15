@@ -23,7 +23,8 @@ import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
 import reactRef from "../assets/Images/ReactRef.png";
-import resume from "../assets/resume/resume.pdf";
+import resume from "../assets/resume/resume.pdf";import ProjectTabs from "./ProjectMain";
+import ProjectMain from "./ProjectMain";
 
 const projects = [
   {
@@ -259,47 +260,10 @@ const V0 = () => {
         </motion.div>
 
         {/* Project sections */}
-        <motion.div
-          className="px-4 sm:px-8"
-          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{
-            duration: 0.3,
-            ease: "easeInOut",
-          }}
-        >
-          <div className=" flex justify-between ">
-            <div className="text-white font-semibold text-lg sm:text-xl mt-8 mb-4">
-              Projects
-            </div>
-            <div className="font-saans mt-8 mb-4">
-              <NavLink
-                to="/projects"
-                className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
-              >
-                View All
-              </NavLink>
-            </div>
-          </div>
+          <ProjectMain />
 
-          <div className="flex justify-center">
-            {/* Adjusted grid for responsiveness: 1 column on small, 2 on medium and up */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-              {projects.map((pr) => (
-                <V0projectCard
-                  key={pr.id}
-                  name={pr.name}
-                  logo={pr.logo}
-                  detail={pr.detail}
-                  url={pr.url}
-                  techStack={pr.techStack}
-                  githubUrl={pr.githubUrl}
-                />
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
+          
         {/* Get in touch */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
