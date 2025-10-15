@@ -11,6 +11,7 @@ import HeikiBackground from "../components/HeikiBackground";
 import weather from "../assets/Images/weather.png";
 import chatbot from "../assets/chatbot application.png";
 import reactRef from "../assets/Images/ReactRef.png";
+import todo from "../assets/Images/todo.png";
 
 const personalProjects = [
     {
@@ -41,7 +42,7 @@ const personalProjects = [
             "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
         logo: ethlinkImg,
         url: "https://eth-link-vcpn.vercel.app/",
-        techStack: ["React", "Tailwind", "Solidity", "Web3"],
+        techStack: ["React", "Tailwind", "Solidity", "Web3" ],
         githubUrl: "https://github.com/rachitdhaka/EthLink",
     },
 
@@ -66,25 +67,23 @@ const personalProjects = [
     },
 ];
 
-const clientWork = [
+const fullStack = [
     {
-        id: 101,
-        title: 'Client Project A',
-        description: 'A custom e-commerce solution.',
-        technologies: ['Shopify', 'React', 'Express.js', 'MongoDB']
+        id: 1,
+        name: "Todo Application",
+        detail: "Todo Application using MERN",
+        logo: todo,
+        url: "https://todo-application-rachit.vercel.app/",
+        techStack: ["React", "Tailwind", "Node", "Express", "MongoDB" ],
+        githubUrl: "https://github.com/rachitdhaka/Todo-Application",
     },
-    {
-        id: 102,
-        title: 'Client Project B',
-        description: 'A mobile application for a fitness company.',
-        technologies: ['React Native', 'Firebase', 'Redux']
-    },
+
 ];
 
 const ProjectMain = () => {
 
     const [activeTab, setActiveTab] = useState("personal");
-    const projectsToDisplay = activeTab === 'personal' ? personalProjects : clientWork;
+    const projectsToDisplay = activeTab === 'personal' ? personalProjects : fullStack;
 
 
     return (
@@ -99,26 +98,26 @@ const ProjectMain = () => {
 
 
 
-                    <button className={` w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
+                <button className={` w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
                     ${activeTab === 'personal' ? 'bg-neutral-700 text-white' : ' hover:bg-neutral-900'
-                        }
+                    }
                     `}
-                        onClick={() => setActiveTab('personal')}
-                    >
-                        Personal Projects
-                    </button>
+                    onClick={() => setActiveTab('personal')}
+                >
+                    Projects
+                </button>
 
 
 
 
-                    <button className={`  w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
-                    ${activeTab === 'client' ? 'bg-neutral-700 text-white' : ' hover:bg-neutral-900'
-                        }
+                <button className={`  w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
+                    ${activeTab === 'fullStack' ? 'bg-neutral-700 text-white' : ' hover:bg-neutral-900'
+                    }
                     `}
 
-                        onClick={() => setActiveTab('client')}>
-                        Client Projects
-                    </button>
+                    onClick={() => setActiveTab('fullStack')}>
+                    Full Stack Projects
+                </button>
 
             </div>
 
@@ -135,18 +134,21 @@ const ProjectMain = () => {
                 }}
             >
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                    {projectsToDisplay.map((pr) => (
-                        <V0projectCard
-                            key={pr.id}
-                            name={pr.name}
-                            logo={pr.logo}
-                            detail={pr.detail}
-                            url={pr.url}
-                            techStack={pr.techStack}
-                            githubUrl={pr.githubUrl}
-                        />
-                    ))}
+                <div className="flex justify-center">
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                        {projectsToDisplay.map((pr) => (
+                            <V0projectCard
+                                key={pr.id}
+                                name={pr.name}
+                                logo={pr.logo}
+                                detail={pr.detail}
+                                url={pr.url}
+                                techStack={pr.techStack}
+                                githubUrl={pr.githubUrl}
+                            />
+                        ))}
+                    </div>
                 </div>
 
 

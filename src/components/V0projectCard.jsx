@@ -10,17 +10,21 @@ const V0projectCard = ({
 }) => {
   return (
     <section>
-      <div className="border border-neutral-800 rounded-xl flex flex-col w-full max-w-xs sm:max-w-sm mx-auto bg-neutral-950 hover:bg-neutral-800 transition-colors duration-400 ">
+      <div className="border border-neutral-800 rounded-xl flex flex-col w-full   mx-auto bg-neutral-950 hover:bg-neutral-800 transition-colors duration-400 ">
+
+        {/* Project Image */}
         <div className="p-2">
           <a href={url} target="_blank" >
             <img
-            src={logo}
-            alt={`Preview of ${name}`}
-            className="w-full h-32 sm:h-40 rounded-lg object-cover aspect-video"
-          />
+              src={logo}
+              alt={`Preview of ${name}`}
+              className="w-full h-32 sm:h-40 rounded-lg object-cover aspect-video"
+            />
           </a>
         </div>
 
+
+        {/* Project Details -  Name and Details */}
         <div className="p-3">
           <p className="text-white font-bold text-base sm:text-[16px] mb-1">
             {name}
@@ -30,8 +34,8 @@ const V0projectCard = ({
           </p>
         </div>
 
-        <div className="px-3  py-4 flex flex-col gap-2">
-          <div className="flex gap-2">
+        <div className="px-3 py-4 flex flex-col gap-2 w-full ">
+          <div className="flex flex-wrap gap-2">
             {techStack.map((tech, index) => (
               <span
                 key={index}
