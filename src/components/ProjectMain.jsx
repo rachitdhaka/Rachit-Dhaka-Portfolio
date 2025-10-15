@@ -98,25 +98,49 @@ const ProjectMain = () => {
 
 
 
-                <button className={` w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
-                    ${activeTab === 'personal' ? 'bg-neutral-700 text-white' : ' hover:bg-neutral-900'
-                    }
-                    `}
+                <button
+                    className="relative w-[50%] cursor-pointer flex justify-center items-center rounded-lg text-sm overflow-hidden"
                     onClick={() => setActiveTab('personal')}
                 >
-                    Projects
+                    {activeTab === 'personal' && (
+                        <motion.span
+                            layoutId="tabHighlight"
+                            className="absolute inset-0 rounded-lg bg-neutral-700"
+                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                        />
+                    )}
+                    <motion.span
+                        className="relative z-10 text-sm font-medium"
+                        animate={{ color: activeTab === 'personal' ? "#FFFFFF" : "#D4D4D4" }}
+                        transition={{ duration: 0.2 }}
+                        initial={false}
+                    >
+                        Projects
+                    </motion.span>
                 </button>
 
 
 
 
-                <button className={`  w-[50%] cursor-pointer text-neutral-200 flex justify-center items-center rounded-lg text-sm
-                    ${activeTab === 'fullStack' ? 'bg-neutral-700 text-white' : ' hover:bg-neutral-900'
-                    }
-                    `}
-
-                    onClick={() => setActiveTab('fullStack')}>
-                    Full Stack Projects
+                <button
+                    className="relative w-[50%] cursor-pointer flex justify-center items-center rounded-lg text-sm overflow-hidden"
+                    onClick={() => setActiveTab('fullStack')}
+                >
+                    {activeTab === 'fullStack' && (
+                        <motion.span
+                            layoutId="tabHighlight"
+                            className="absolute inset-0 rounded-lg bg-neutral-700"
+                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                        />
+                    )}
+                    <motion.span
+                        className="relative z-10 text-sm font-medium"
+                        animate={{ color: activeTab === 'fullStack' ? "#FFFFFF" : "#D4D4D4" }}
+                        transition={{ duration: 0.2 }}
+                        initial={false}
+                    >
+                        Full Stack Projects
+                    </motion.span>
                 </button>
 
             </div>
