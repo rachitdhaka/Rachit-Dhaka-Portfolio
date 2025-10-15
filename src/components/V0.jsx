@@ -263,7 +263,7 @@ const V0 = () => {
           <ProjectMain />
 
 
-          
+
         {/* Get in touch */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}

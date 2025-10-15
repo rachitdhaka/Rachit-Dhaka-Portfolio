@@ -5,7 +5,7 @@
  *
  * NOTE: Ensure the parent element has `relative` positioning.
  * Any child elements other than HeikiBackground should also have `relative` positioning.
- * 
+ *
  * @param {string} primaryColor - The primary color for the pattern (default: "#00895e").
  * @param {string} secondaryColor - The secondary color for the pattern (default: "#2f8d46").
  * @param {string} backgroundColor - The background color (default: "#ffffff").

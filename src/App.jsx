@@ -14,11 +14,11 @@ const router = createBrowserRouter(
     {
       path:"/",
       element:
-      <div> 
+      <div>
          <V0Navbar/>
         <V0/>
       </div>
-        
+
     },
     {
       path:"/projects",
@@ -55,11 +55,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen relative">
       <HeikiBackground
         primaryColor="#ededed"
         backgroundColor = "#0a0a0a"
-        
+
         pattern="grid"
         density="dense"
         opacity={0.2}
@@ -68,7 +68,7 @@ function App() {
         <RouterProvider router={router} />
       </div>
     </div>
-    
+
   )
 
 }
