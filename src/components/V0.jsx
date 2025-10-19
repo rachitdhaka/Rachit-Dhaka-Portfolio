@@ -23,9 +23,10 @@ import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
 import reactRef from "../assets/Images/ReactRef.png";
-import resume from "../assets/resume/resume.pdf";import ProjectTabs from "./ProjectMain";
+import resume from "../assets/resume/resume.pdf"; import ProjectTabs from "./ProjectMain";
 import ProjectMain from "./ProjectMain";
-
+import resumeSvg from "../assets/Images/resume.png";
+import { FileText } from "lucide-react";
 const projects = [
   {
     id: 1,
@@ -121,6 +122,9 @@ const V0 = () => {
   if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
     age--;
   }
+
+
+
   return (
     <div className="w-full min-h-screen relative">
       {/* main section */}
@@ -207,11 +211,14 @@ const V0 = () => {
             </p>
             <br />
             <a
-            href={resume}
-            download="Rachit_Dhaka_Resume.pdf"
-            className="text-neutral-400 tracking-tight text-sm sm:text-base hover:text-white pointer cursor hover:bg-neutral-700 hover:rounded px-2 py-0.5">
-              Download Resume
-             </a>
+              href={resume}
+              download="Rachit_Dhaka_Resume.pdf"
+              className="flex items-center gap-2 w-fit bg-neutral-900 text-white px-5 py-2.5 text-sm rounded-xl border border-neutral-800 hover:bg-neutral-800 transition-all duration-300 shadow-md"
+
+            >
+              <FileText className="w-5 h-5" />
+              <p>Resume / CV</p>
+            </a>
           </div>
 
 
@@ -260,7 +267,7 @@ const V0 = () => {
         </motion.div>
 
         {/* Project sections */}
-          <ProjectMain />
+        <ProjectMain />
 
 
 
@@ -315,12 +322,17 @@ const V0 = () => {
           </div>
         </motion.div>
 
-        <div className="text-[10px] text-white flex justify-center   underline font-bold pb-10">
+        <div className=" text-white flex flex-col justify-center  items-center gap-5  pb-10">
+
+          <p className="text-[12px] flex flex-col text-center">
+             Design & Developed by Rachit Dhaka <br></br>
+            © 2025. All rights reserved.
+          </p>
           <NavLink
             to="/version1"
-            className="text-white text-md hover:bg-neutral-700 px-2 py-0.5 rounded "
+            className="text-white text-[10px] font-thin hover:bg-neutral-700 px-2 py-0.5 rounded "
           >
-            Version 1
+             v <span className="text-md">1</span>
           </NavLink>
         </div>
       </div>
