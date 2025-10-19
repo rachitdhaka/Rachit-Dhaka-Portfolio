@@ -73,7 +73,7 @@ const fullStack = [
         name: "Todo Application",
         detail: "Todo Application using MERN",
         logo: todo,
-        url: "https://todo-application-rachit.vercel.app/",
+        url: "https://todo-app-rachit.vercel.app/",
         techStack: ["React", "Tailwind", "Node", "Express", "MongoDB" ],
         githubUrl: "https://github.com/rachitdhaka/Todo-Application",
     },
