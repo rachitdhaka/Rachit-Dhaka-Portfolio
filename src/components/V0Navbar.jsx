@@ -4,7 +4,7 @@ import {
   Github,
   Code,
   Briefcase,
-  
+
 } from "lucide-react";
 
 const V0Navbar = () => {
@@ -61,64 +61,39 @@ const V0Navbar = () => {
           <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
             <NavLink
               to="/projects"
-              className="text-[12px] sm:text-[14px] font-medium font-saans"
+              target="_blank"
+              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
             >
-              <div className="py-1">
-                <Briefcase
-                  size={20}
-                  color="#ffffff"
-                  strokeWidth={1.5}
-                  className="hover:text-gray-300 "
-                />
+              <Briefcase size={20} color="#fff" strokeWidth={1.5} />
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                Projects
               </div>
             </NavLink>
-            {/* Tooltip */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-              Projects
-            </div>
+          </div>
 
-
-
+          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
+            <a
+              href="https://github.com/rachitdhaka"
+              
+              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
+            >
+              <Github size={20} color="#fff" strokeWidth={1.5} />
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                GitHub
+              </div>
+            </a>
           </div>
           <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
             <a
               href="https://github.com/rachitdhaka"
               target="_blank"
-              className="text-[12px] sm:text-[14px] font-medium font-saans "
+              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
             >
-              <div className="py-1">
-                <Github
-                  size={20}
-                  color="#ffffff"
-                  strokeWidth={1.5}
-                  className="hover:text-gray-300 "
-                />
+              <Code size={20} color="#fff" strokeWidth={1.5} />
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                Leetcode
               </div>
             </a>
-            {/* Tooltip */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-              GitHub
-            </div>
-          </div>
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
-            <a
-              href="https://leetcode.com/u/rachitdhaka/"
-              target="_blank"
-              className="text-[12px] sm:text-[14px] font-medium font-saans"
-            >
-              <div className="py-1">
-                <Code
-                  size={20}
-                  color="#ffffff"
-                  strokeWidth={1.5}
-                  className="hover:text-gray-300 "
-                />
-              </div>
-            </a>
-            {/* Tooltip */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2  text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-              LeetCode
-            </div>
           </div>
         </div>
       </section>

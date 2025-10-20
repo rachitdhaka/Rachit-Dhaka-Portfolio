@@ -163,14 +163,14 @@ const V0 = () => {
               }}
               className="text-center sm:text-left"
             >
-              <p className="text-lg sm:text-xl font-medium text-white tracking-tighter">
+              <p className="text-lg sm:text-xl geist-regular text-white tracking-tighter">
                 Hi, I'm
               </p>
               {/* Adjusted font size for different screens */}
-              <h1 className="text-4xl sm:text-[3rem] font-bold text-white tracking-tighter">
+              <h1 className="text-4xl sm:text-[3rem] text-white tracking-tighter geist-regular ">
                 Rachit Dhaka
               </h1>
-              <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
+              <p className="text-neutral-400 tracking-tight text-[15px] ">
                 {age}, Chennai | Full Stack Developer - Problem Solver
               </p>
             </motion.div>
@@ -189,25 +189,9 @@ const V0 = () => {
           }}
         >
           <div>
-            <h1 className="text-white font-semibold text-lg sm:text-xl mb-2">
-              About
-            </h1>
-            <p className="text-neutral-400 tracking-tight text-sm sm:text-base">
-              Mentor{" "}
-              <a
-                href="https://gfgsrmrmp.vercel.app/"
-                className="text-neutral-50 underline "
-              >
-                Geeks For Geeks SRM RMP
-              </a>{" "}
-              | Building{" "}
-              <a
-                href="https://vartalaappodcast.vercel.app/"
-                className=" text-neutral-50 underline"
-              >
-                Vartalaap
-              </a>{" "}
-              – A Platform for Powerful Voices
+
+            <p className="text-neutral-400 text-[15px]  geist-regular">
+              I'm a Full Stack Developer and Mentor at <a href="https://gfgsrmrmp.vercel.app/" className="underline text-neutral-200">GeeksforGeeks SRM RMP</a>, passionate about building impactful web experiences and solving challenges through DSA and creative problem-solving.
             </p>
             <br />
             <a
@@ -217,7 +201,7 @@ const V0 = () => {
 
             >
               <FileText className="w-5 h-5" />
-              <p>Resume / CV</p>
+              <p className="geist-regular">Resume / CV</p>
             </a>
           </div>
 
@@ -234,7 +218,7 @@ const V0 = () => {
             ease: "easeInOut",
           }}
         >
-          <h1 className="text-white font-semibold text-lg sm:text-xl mt-8 mb-4">
+          <h1 className="text-white geist-medium text-lg sm:text-xl mt-8 mb-4">
             Experiences
           </h1>
 

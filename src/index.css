@@ -1,6 +1,6 @@
 @import url(https://db.onlinewebfonts.com/c/54ff549a54ee6bdf2fc828c0f8371da2?family=Schelter+Grotesk+NF+W01+Bold);
 
-
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
 @font-face {
     font-family: Maga;
@@ -15,6 +15,40 @@
     font-family: Saans;
     src: url(../src/assets/fonts/saans-font.woff2);
 }
+
+*{
+    font-family: var(--font-geist);
+    
+}
+
+.geist-regular {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geist-medium {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.geist-semibold {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.geist-bold {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
 @import "tailwindcss";
 
 /*  */
@@ -24,4 +58,7 @@
     --font-schelter:Schelter Grotesk NF , "san-serif";
     --font-martin:Martin,"san-serif";
     --font-saans:Saans,"san-serif";
+    --font-geist:Geist,"sans-serif";
 }
+
+

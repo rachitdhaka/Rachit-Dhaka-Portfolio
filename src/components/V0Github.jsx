@@ -22,10 +22,10 @@ const V0Github = () => {
   return (
     <section>
 
-      <h1 className="text-white font-semibold text-lg pl-8 sm:text-xl mt-8 mb-4">
+      <h1 className="text-white geist-medium text-lg pl-8 sm:text-xl mt-8 mb-4">
             Github Contribution
         </h1>
-  
+
 
       <div className="overflow-auto px-10 bg-[#0a0a0a] p-4 rounded-3xl text-white">
         <GitHubCalendar
