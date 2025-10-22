@@ -7,12 +7,33 @@ import {
 
 } from "lucide-react";
 
+const navItems = [
+  {
+    name: "Projects",
+    href: "https://rachitdhaka.vercel.app/projects",
+    icon: Briefcase,
+    target: "_blank",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/rachitdhaka",
+    icon: Github,
+  },
+  {
+    name: "Leetcode",
+    href: "https://leetcode.com/rachitdhaka",
+    icon: Code,
+    target: "_blank",
+  },
+];
+
+
 const V0Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <section className="">
-      <section className="text-white max-w-2xl  mx-auto px-14 flex justify-between items-center pt-15 md:h-12 relative">
+    <section className="pt-10">
+      <section className="text-white  max-w-2xl  mx-auto px-14 flex justify-between items-center  md:h-12 relative">
         {/* Left Side: Logo */}
         <div>
           <NavLink
@@ -57,45 +78,27 @@ const V0Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-2">
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
-            <NavLink
-              to="/projects"
-              target="_blank"
-              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
+        <div className="hidden md:flex gap-2 ">
+          {navItems.map(({ name, href, icon: Icon, target }, index) => (
+            <div
+              key={index}
+              className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group"
             >
-              <Briefcase size={20} color="#fff" strokeWidth={1.5} />
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                Projects
-              </div>
-            </NavLink>
-          </div>
-
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
-            <a
-              href="https://github.com/rachitdhaka"
-              
-              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
-            >
-              <Github size={20} color="#fff" strokeWidth={1.5} />
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                GitHub
-              </div>
-            </a>
-          </div>
-          <div className="hover:bg-neutral-700 px-2 py-0.5 rounded relative group">
-            <a
-              href="https://github.com/rachitdhaka"
-              target="_blank"
-              className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
-            >
-              <Code size={20} color="#fff" strokeWidth={1.5} />
-              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-                Leetcode
-              </div>
-            </a>
-          </div>
+              <a
+                href={href}
+                target={target}
+                rel="noopener noreferrer"
+                className="relative group flex items-center justify-center w-8 h-8 hover:bg-neutral-700 rounded transition-all duration-200"
+              >
+                <Icon size={20} color="#fff" strokeWidth={1.5} />
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none bg-black">
+                  {name}
+                </div>
+              </a>
+            </div>
+          ))}
         </div>
+
       </section>
 
       {/* Fullscreen Mobile Dropdown */}

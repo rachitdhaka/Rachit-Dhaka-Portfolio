@@ -26,7 +26,7 @@ import reactRef from "../assets/Images/ReactRef.png";
 import resume from "../assets/resume/resume.pdf"; import ProjectTabs from "./ProjectMain";
 import ProjectMain from "./ProjectMain";
 import resumeSvg from "../assets/Images/resume.png";
-import { FileText } from "lucide-react";
+import { FileText, Github, Linkedin, X } from "lucide-react";
 const projects = [
   {
     id: 1,
@@ -108,6 +108,29 @@ const exp = [
   },
 ];
 
+const socialLinks = [
+  {
+    name: "Twitter",
+    href: "https://x.com/rachitdhaka_",
+    Icon: IconBrandX,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/rachitdhaka",
+    Icon: IconBrandGithub,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/rachitdhaka/",
+    Icon: IconBrandLinkedin,
+  },
+  {
+    name: "Codolio",
+    href: "https://codolio.com/profile/rachitdhaka",
+    Icon: IconCode,
+  },
+];
+
 const V0 = () => {
 
   const dob = new Date("2004-09-29");
@@ -131,10 +154,9 @@ const V0 = () => {
       {/* Added responsive padding px-4 for smaller screens, p-8 for larger */}
       <div className="max-w-2xl mx-auto  px-4 sm:px-8 relative">
         {/* naming and intro */}
-        {/* Changed flex direction to column on small screens, row on medium and up */}
+
         <div className="flex flex-col sm:flex-row p-4 sm:p-8 items-center sm:items-start text-center sm:text-left">
           {/* right side */}
-          {/* Adjusted width for smaller screens, added margin-top for separation */}
           <motion.div
             className="w-full sm:w-[30%] flex justify-center sm:justify-center items-center py-4 sm:py-2 mt-6 sm:mt-0 "
             initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
@@ -151,7 +173,6 @@ const V0 = () => {
             />
           </motion.div>
           {/* left side */}
-          {/* Adjusted width for smaller screens, text alignment */}
           <div className="w-full sm:w-[70%] flex justify-center sm:justify-end items-center">
             {/* content div */}
             <motion.div
@@ -176,6 +197,7 @@ const V0 = () => {
             </motion.div>
           </div>
         </div>
+
 
         {/* about section */}
         {/* Adjusted padding */}
@@ -205,7 +227,25 @@ const V0 = () => {
             </a>
           </div>
 
+          {/* Project sections */}
+          <ProjectMain />
 
+        </motion.div>
+
+        {/* guthub contribution calndar  */}
+        <V0Github />
+
+        {/* skills section */}
+        <motion.div
+          className="px-4 sm:px-8" // Ensure consistent padding
+          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <V0skills />
         </motion.div>
 
         {/* Experience */}
@@ -233,28 +273,6 @@ const V0 = () => {
             />
           ))}
         </motion.div>
-
-        {/* guthub contribution calndar  */}
-        <V0Github />
-
-        {/* skills section */}
-        <motion.div
-          className="px-4 sm:px-8" // Ensure consistent padding
-          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
-          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-          transition={{
-            duration: 0.3,
-            ease: "easeInOut",
-          }}
-        >
-          <V0skills />
-        </motion.div>
-
-        {/* Project sections */}
-        <ProjectMain />
-
-
-
         {/* Get in touch */}
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
@@ -266,57 +284,45 @@ const V0 = () => {
           className="flex justify-center items-center mt-10 flex-col px-4 sm:px-8 pb-10"
         >
           {/* Adjusted font size for responsiveness */}
-          <h1 className="text-white text-3xl sm:text-4xl font-bold">
+          <h1 className="text-white text-xl  ">
             Get in Touch
           </h1>
 
-          <div className="flex gap-3 pt-8">
-            <a
-              href="https://x.com/rachitdhaka_"
-              className="hover:underline font-saans"
-              aria-label="Link to Twitter profile"
-            >
-              <IconBrandX stroke={1} color="white" size={24} />{" "}
-              {/* Added size for consistency */}
-            </a>
 
-            <a
-              href="https://github.com/rachitdhaka"
-              className="hover:underline font-saans"
-              aria-label="Link to GitHub profile"
-            >
-              <IconBrandGithub stroke={1} color="white" size={24} />
-            </a>
+          <div className="flex gap-3 pt-2">
+            {socialLinks.map(({ name, href, Icon }, index) => (
+              <a
+                key={index}
+                href={href}
+                className="relative group font-saans"
+                aria-label={`Link to ${name} profile`} // Optional, accessible
+              >
+                <Icon stroke={1} color="white" size={24} />
 
-            <a
-              href="https://www.linkedin.com/in/rachitdhaka/"
-              className="hover:underline font-saans"
-              aria-label="Link to LinkedIn profile"
-            >
-              <IconBrandLinkedin stroke={1} color="white" size={24} />
-            </a>
-
-            <a
-              href="https://codolio.com/profile/rachitdhaka"
-              className="hover:underline font-saans"
-              aria-label="Link to Codolio profile"
-            >
-              <IconCode stroke={1} color="white" size={24} />
-            </a>
+                {/* Tooltip below the icon */}
+                <div className="absolute top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none bg-black">
+                  {name}
+                </div>
+              </a>
+            ))}
           </div>
+
+
+
+
         </motion.div>
 
         <div className=" text-white flex flex-col justify-center  items-center gap-5  pb-10">
 
           <p className="text-[12px] flex flex-col text-center">
-             Design & Developed by Rachit Dhaka <br></br>
+            Design & Developed by Rachit Dhaka <br></br>
             © 2025. All rights reserved.
           </p>
           <NavLink
             to="/version1"
             className="text-white text-[10px] font-thin hover:bg-neutral-700 px-2 py-0.5 rounded "
           >
-             v <span className="text-md">1</span>
+            v <span className="text-md">1</span>
           </NavLink>
         </div>
       </div>
