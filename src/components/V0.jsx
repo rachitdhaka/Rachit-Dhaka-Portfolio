@@ -23,7 +23,7 @@ import weather from "../assets/Images/weather.png";
 import GitHubCalendar from "react-github-calendar";
 import HeikiBackground from "../components/HeikiBackground";
 import reactRef from "../assets/Images/ReactRef.png";
-import resume from "../assets/resume/resume.pdf"; import ProjectTabs from "./ProjectMain";
+import resume from "../assets/resume/RachitResume.pdf"
 import ProjectMain from "./ProjectMain";
 import resumeSvg from "../assets/Images/resume.png";
 import { FileText, Github, Linkedin, X } from "lucide-react";
