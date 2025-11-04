@@ -41,7 +41,7 @@ const projects = [
     techStack: ["React", "Tailwind" ],
     githubUrl: "https://github.com/rachitdhaka/React-Ref",
   },
-  
+
   {
     id: 3,
     name: "Eth Link",
@@ -84,7 +84,7 @@ const projects = [
   },
 ];
 
-const V0ProjectPage = () => {
+const V1ProjectPage = () => {
   return (
 
 
@@ -107,8 +107,8 @@ const V0ProjectPage = () => {
           </div>
         </section>
       </section>
-   
+
   );
 };
 
-export default V0ProjectPage;
+export default V1ProjectPage;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const V0exp = ({ logo, name, position, sd, ed }) => {
+const V1exp = ({ logo, name, position, sd, ed }) => {
   return (
     <section className="max-w-2xl w-full px-4 sm:px-8 mt-3">
       <div className="flex items-center gap-4 flex-wrap sm:flex-nowrap">
@@ -28,4 +28,4 @@ const V0exp = ({ logo, name, position, sd, ed }) => {
   );
 };
 
-export default V0exp;
+export default V1exp;

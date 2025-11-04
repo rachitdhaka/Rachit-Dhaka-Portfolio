@@ -28,7 +28,7 @@ const navItems = [
 ];
 
 
-const V0Navbar = () => {
+const V1Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -134,4 +134,4 @@ const V0Navbar = () => {
   );
 };
 
-export default V0Navbar;
+export default V1Navbar;

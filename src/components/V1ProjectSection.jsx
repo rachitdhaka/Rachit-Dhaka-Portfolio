@@ -7,7 +7,7 @@ import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
 import paste from "../assets/Images/paste.png";
 import game from "../assets/Images/game.png";
-import HeikiBackground from "../components/HeikiBackground";
+import HeikiBackground from "./HeikiBackground";
 import weather from "../assets/Images/weather.png";
 import chatbot from "../assets/chatbot application.png";
 import reactRef from "../assets/Images/ReactRef.png";
@@ -80,7 +80,7 @@ const fullStack = [
 
 ];
 
-const ProjectMain = () => {
+const V1ProjectSection = () => {
 
     const [activeTab, setActiveTab] = useState("personal");
     const projectsToDisplay = activeTab === 'personal' ? personalProjects : fullStack;
@@ -185,5 +185,5 @@ const ProjectMain = () => {
     )
 }
 
-export default ProjectMain
+export default V1ProjectSection
 

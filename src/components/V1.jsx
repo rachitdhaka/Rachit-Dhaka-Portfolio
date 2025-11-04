@@ -1,71 +1,149 @@
-import React from "react";
-import ProjectCard from "./ProjectCard";
-import ethlinkImg from "../assets/Images/image.png";
-import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
-import paste from "../assets/Images/paste.png";
-import game from "../assets/Images/game.png";
-import dp from "../assets/Images/Orginal.jpg"
+// Importing all the Images and icons
+import gfg from "../assets/Images/gfglogo.png";
+import dp from "../assets/Images/Orginal.jpg";
+import vp from "../assets/Images/VARTAA.png";
+import ck from "../assets/Images/download.jpeg";
+import resume from "../assets/resume/RachitResume.pdf"
+import {
+  IconBrandGithub,  IconBrandX,  IconBrandLinkedin,  IconCode,} from "@tabler/icons-react";
 
-import FooterV1 from "./FooterV1";
-import { NavLink } from "react-router-dom";
-import Skills from "./Skills";
-import GithubCalendar from "./GithubCalendar";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { FileText} from "lucide-react";
+  
 
-const projects = [
+
+// import working v1 imports
+import V1Github from "./V1Github";
+import V1ProjectSection from "./V1ProjectSection";
+import V1exp from "./V1exp";
+import V1skills from "./V1skills";
+
+// Array of experience and social links
+const exp = [
   {
     id: 1,
-    title: "Eth Link",
-    description: "Decentralised Job Searching Platform",
-    image: ethlinkImg,
-    url: "https://eth-link-vcpn.vercel.app/",
+    name: "GeeksForGeeks SRM RMP",
+    position: "Core Member - Head of Operations",
+    logo: gfg,
+    sd: "Aug 2024",
+    ed: "Apr 2025",
   },
   {
     id: 2,
-    title: "OrbitUs",
-    description: "Decentralised Drop Servicing Platform.",
-    image: orbitus,
-    url: "https://orbitus.vercel.app/",
+    name: "Vartalaap Podcast",
+    position: "Host & Co-Founder",
+    logo: vp,
+    sd: "Dec 2023",
+    ed: "Mar 2024",
   },
   {
     id: 3,
-    title: "Paste Application",
-    description: "Save your notes , code , Information .",
-    image: paste,
-    url: "https://paste-saving.vercel.app",
-  },
-  {
-    id: 4,
-    title: "Tic Tac Toe",
-    description: "Simple Game.",
-    image: game,
-    url: "https://tictactoe-rachit.vercel.app/",
+    name: "Code Kraftors",
+    position: "Web3 Domain Member",
+    logo: ck,
+    sd: "Nov 2022",
+    ed: "Jul 2024",
   },
 ];
 
-// Animation variants
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
-    },
+const socialLinks = [
+  {
+    name: "Twitter",
+    href: "https://x.com/rachitdhaka_",
+    Icon: IconBrandX,
   },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
+  {
+    name: "GitHub",
+    href: "https://github.com/rachitdhaka",
+    Icon: IconBrandGithub,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/rachitdhaka/",
+    Icon: IconBrandLinkedin,
+  },
+  {
+    name: "Codolio",
+    href: "https://codolio.com/profile/rachitdhaka",
+    Icon: IconCode,
+  },
+];
 
 const V1 = () => {
+
+  const dob = new Date("2004-09-29");
+  const today = new Date();
+
+
+  let age = today.getFullYear() - dob.getFullYear();
+  const monthDiff = today.getMonth() - dob.getMonth();
+  const dayDiff = today.getDate() - dob.getDate();
+
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
+
+
+
   return (
-    <div className="bg-slate-50 min-h-screen">
-      {/* Hero section */}
-      <div className="w-full lg:max-w-[60%] md:max-w-[60%] sm:max-w-[80%] px-4 sm:px-6 py-8 mx-auto">
-        <motion.main
+    <div className="w-full min-h-screen relative">
+      {/* main section */}
+      {/* Added responsive padding px-4 for smaller screens, p-8 for larger */}
+      <div className="max-w-2xl mx-auto  px-4 sm:px-8 relative">
+
+
+        {/* naming and intro */}
+
+        <div className="flex flex-col sm:flex-row p-4 sm:p-8 items-center sm:items-start text-center sm:text-left">
+          {/* right side */}
+          <motion.div
+            className="w-full sm:w-[30%] flex justify-center sm:justify-center items-center py-4 sm:py-2 mt-6 sm:mt-0 "
+            initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            transition={{
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+          >
+            <img
+              src={dp}
+              alt="Rachit Dhaka"
+              className="h-20 w-20 sm:h-27 sm:w-27 rounded-4xl aspect-square shadow-[0_4px_30px_rgba(255,255,255,0.25)]"
+            />
+          </motion.div>
+          {/* left side */}
+          <div className="w-full sm:w-[70%] flex justify-center sm:justify-end items-center">
+            {/* content div */}
+            <motion.div
+              initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+              whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{
+                duration: 0.3,
+                ease: "easeInOut",
+              }}
+              className="text-center sm:text-left"
+            >
+              <p className="text-lg sm:text-xl geist-regular text-white tracking-tighter">
+                Hi, I'm
+              </p>
+              {/* Adjusted font size for different screens */}
+              <h1 className="text-4xl sm:text-[3rem] text-white tracking-tighter geist-regular ">
+                Rachit Dhaka
+              </h1>
+              <p className="text-neutral-400 tracking-tight text-[15px] ">
+                {age}, Chennai | Full Stack Developer - Problem Solver
+              </p>
+            </motion.div>
+          </div>
+        </div>
+
+
+        {/* about section */}
+        {/* Adjusted padding */}
+        <motion.div
+          className="px-4 sm:px-8 mt-4 sm:mt-0 flex flex-col gap-2"
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           transition={{
@@ -73,111 +151,130 @@ const V1 = () => {
             ease: "easeInOut",
           }}
         >
-          <motion.section variants={item} className="mb-12">
-            <div className="flex">
-              <div className="w-[80%]">
-                <motion.h1
-                  variants={item}
-                  className="font-maga text-3xl sm:text-4xl font-bold mb-2 "
-                >
-                  Hello, I'm{" "}
-                  <span className="hover:text-amber-600 ease-in duration-300">
-                    Rachit Dhaka
-                  </span>
-                </motion.h1>
+          <div>
 
-                <motion.p
-                  variants={item}
-                  className="text-lg sm:text-xl font-saans text-gray-500 mb-6 sm:mb-2"
-                >
-                  Developer - Dsa - Designer
-                </motion.p>
+            <p className="text-neutral-400 text-[15px]  geist-regular">
+              I'm a Full Stack Developer and Mentor at <a href="https://gfgsrmrmp.vercel.app/" className="underline text-neutral-200">GeeksforGeeks SRM RMP</a>, passionate about building impactful web experiences and solving challenges through DSA and creative problem-solving.
+            </p>
+            <br />
+            <a
+              href={resume}
+              download="Rachit_Dhaka_Resume.pdf"
+              className="flex items-center gap-2 w-fit bg-neutral-900 text-white px-5 py-2.5 text-sm rounded-xl border border-neutral-800 hover:bg-neutral-800 transition-all duration-300 shadow-md"
 
-                <motion.p
-                  variants={item}
-                  className="text-[16px] font-saans text-gray-500 mb-8 sm:mb-8 italic"
-                >
-                  "Where there’s <span className="text-amber-600">Chai</span>{" "}
-                  and a <span className="text-blue-600">Keyboard</span>, you’ll
-                  find me building something."
-                </motion.p>
-              </div>
-
-              {/* image div */}
-              <div className="w-[20%]  sm:w-[20%] flex justify-center items-center ">
-                <img src={dp} alt="Rachit Dhaka Image " className="rounded-full h-22 w-22   sm:h-32 sm:w-32" />
-              </div>
-            </div>
-
-            <motion.p
-              variants={item}
-              className="font-Saans text-[15px] sm:text-[16px] text-gray-700 mb-3 leading-relaxed"
             >
-              <span className="font-bold font-maga text-xl">
-                Web Developer{" "}
-                <span className="font-saans font-extralight">&</span> Problem
-                Solver
-              </span>{" "}
-              <br />
-              Mentor -{" "}
-              <a
-                href="https://gfgsrmrmp.vercel.app/"
-                className="font-bold font-maga hover:text-2xl duration-300 underline hover:text-green-600 "
-              >
-                GeeksForGeeks SRM RMP
-              </a>{" "}
-              | Building{" "}
-              <a
-                href="https://vartalaappodcast.vercel.app/"
-                className="font-bold font-maga hover:text-2xl duration-300 underline hover:text-red-500"
-              >
-                Vartalaap
-              </a>{" "}
-              - A Podcast Platform for Voices That Matter
-            </motion.p>
+              <FileText className="w-5 h-5" />
+              <p className="geist-regular">Resume / CV</p>
+            </a>
+          </div>
 
-            <NavLink to="/about">
-              <motion.button
-                variants={item}
-                className="bg-neutral-700 text-white px-4 py-2 mt-4 rounded-4xl hover:scale-110 duration-300 flex items-center gap-2 cursor-pointer hover:bg-neutral-950"
+
+        </motion.div>
+
+
+        {/* Project sections */}
+        <V1ProjectSection />
+
+        {/* github contribution calendar  */}
+        <V1Github />
+
+
+        {/* skills section */}
+        <motion.div
+          className="px-4 sm:px-8" // Ensure consistent padding
+          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <V1skills />
+        </motion.div>
+
+
+        {/* Experience */}
+        <motion.div
+          className="max-w-2xl px-4 sm:px-8" // Ensure consistent padding
+          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <h1 className="text-white geist-medium text-lg sm:text-xl mt-8 mb-4">
+            Experiences
+          </h1>
+
+          {exp.map((e) => (
+            <V1exp
+              key={e.id}
+              name={e.name}
+              position={e.position}
+              logo={e.logo}
+              sd={e.sd}
+              ed={e.ed}
+            />
+          ))}
+        </motion.div>
+
+
+        {/* Get in touch */}
+        <motion.div
+          initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
+          whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+          className="flex justify-center items-center mt-10 flex-col px-4 sm:px-8 pb-10"
+        >
+          {/* Adjusted font size for responsiveness */}
+          <h1 className="text-white text-xl  ">
+            Get in Touch
+          </h1>
+
+
+          <div className="flex gap-3 pt-2">
+            {socialLinks.map(({ name, href, Icon }, index) => (
+              <a
+                key={index}
+                href={href}
+                className="relative group font-saans"
+                aria-label={`Link to ${name} profile`} // Optional, accessible
               >
-                More Information
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </motion.button>
-            </NavLink>
-          </motion.section>
-        </motion.main>
-        <hr className="border-gray-200 my-1" />
+                <Icon stroke={1} color="white" size={24} />
+
+                {/* Tooltip below the icon */}
+                <div className="absolute top-8 left-1/2 -translate-x-1/2 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none bg-black">
+                  {name}
+                </div>
+              </a>
+            ))}
+          </div>
+
+
+
+
+        </motion.div>
+
+
+        {/* watermark */}
+        <div className=" text-white flex flex-col justify-center  items-center gap-5  pb-10">
+
+          <p className="text-[12px] flex flex-col text-center">
+            Design & Developed by Rachit Dhaka <br></br>
+            © 2025. All rights reserved.
+          </p>
+          <NavLink
+            to="/version1"
+            className="text-white text-[10px] font-thin hover:bg-neutral-700 px-2 py-0.5 rounded "
+          >
+            v <span className="text-md">1</span>
+          </NavLink>
+        </div>
       </div>
-
-
-
-      {/* Projects section */}
-      <ProjectCard />
-
-      <hr className="border-gray-200 my-1  w-[60%] mx-auto " />
-
-      {/* Github calendar */}
-      <GithubCalendar />
-
-      {/* Skills section */}
-      <Skills />
-
-      {/* Footer */}
-      <FooterV1 />
     </div>
   );
 };

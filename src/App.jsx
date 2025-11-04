@@ -1,13 +1,17 @@
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router";
+
+
+//Version 1 of the website imports
 import V1 from "./components/V1";
-import V0 from "./components/V0";
-import V0ProjectPage from "./Pages/V0ProjectPage";
-import FooterV0 from "./components/FooterV0";
-import FooterV1 from "./components/FooterV1";
+import V1ProjectPage from "./Pages/V1ProjectPage";
+import V1Navbar from "./components/V1Navbar";
+import HeikiBackground from "./components/HeikiBackground"
+
+
+
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import V0Navbar from "./components/V0Navbar";
-import HeikiBackground from "./components/HeikiBackground"
+import V0 from "./components/V0";
 
 const router = createBrowserRouter(
   [
@@ -15,8 +19,8 @@ const router = createBrowserRouter(
       path:"/",
       element:
       <div>
-        <V0Navbar/>
-        <V0/>
+        <V1Navbar/>
+        <V1/>
       </div>
 
     },
@@ -24,8 +28,8 @@ const router = createBrowserRouter(
       path:"/projects",
       element:
       <div>
-        <V0Navbar/>
-        <V0ProjectPage/>
+        <V1Navbar/>
+        <V1ProjectPage/>
       </div>
     },
 
@@ -34,7 +38,7 @@ const router = createBrowserRouter(
       element:
         <div>
           <Navbar/>
-          <V1/>
+          <V0/>
         </div>
     },
 

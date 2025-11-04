@@ -35,7 +35,7 @@ const Skills = () => {
 
 
       <h2 className="text-2xl sm:text-3xl font-bold font-maga mb-8">
-        Skills
+        Skillsbak bak abka bka
       </h2>
 
       <motion.div className="flex justify-center">

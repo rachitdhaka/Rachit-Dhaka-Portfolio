@@ -2,7 +2,7 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { IconBrandGithub } from "@tabler/icons-react";
 
-const V0Github = () => {
+const V1Github = () => {
   const theme = {
     light: [
       "#ebedf0", // Level 0
@@ -48,4 +48,4 @@ const V0Github = () => {
   );
 };
 
-export default V0Github;
+export default V1Github;
