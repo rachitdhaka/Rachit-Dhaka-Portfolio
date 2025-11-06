@@ -10,7 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { FileText} from "lucide-react";
-  
+
 
 
 // import working v1 imports
@@ -18,6 +18,7 @@ import V1Github from "./V1Github";
 import V1ProjectSection from "./V1ProjectSection";
 import V1exp from "./V1exp";
 import V1skills from "./V1skills";
+import { V1TooltipCard } from "./V1TooltipCard";
 
 // Array of experience and social links
 const exp = [
@@ -143,7 +144,7 @@ const V1 = () => {
         {/* about section */}
         {/* Adjusted padding */}
         <motion.div
-          className="px-4 sm:px-8 mt-4 sm:mt-0 flex flex-col gap-2"
+          className="px-4 sm:px-8 mt-4 sm:mt-0 flex flex-col gap-2 relative z-10"
           initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
           transition={{
@@ -153,10 +154,9 @@ const V1 = () => {
         >
           <div>
 
-            <p className="text-neutral-400 text-[15px]  geist-regular">
-              I'm a Full Stack Developer and Mentor at <a href="https://gfgsrmrmp.vercel.app/" className="underline text-neutral-200">GeeksforGeeks SRM RMP</a>, passionate about building impactful web experiences and solving challenges through DSA and creative problem-solving.
-            </p>
-            <br />
+            <V1TooltipCard/>
+
+
             <a
               href={resume}
               download="Rachit_Dhaka_Resume.pdf"
