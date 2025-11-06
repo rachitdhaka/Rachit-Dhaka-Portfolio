@@ -110,7 +110,9 @@ const V1ProjectSection = () => {
                         />
                     )}
                     <motion.span
-                        className="relative z-10 text-sm font-medium"
+                        className="relative z-5
+
+                        text-sm font-medium"
                         animate={{ color: activeTab === 'personal' ? "#FFFFFF" : "#D4D4D4" }}
                         transition={{ duration: 0.2 }}
                         initial={false}
@@ -134,7 +136,7 @@ const V1ProjectSection = () => {
                         />
                     )}
                     <motion.span
-                        className="relative z-10 text-sm font-medium"
+                        className="relative z-5 text-sm font-medium"
                         animate={{ color: activeTab === 'fullStack' ? "#FFFFFF" : "#D4D4D4" }}
                         transition={{ duration: 0.2 }}
                         initial={false}
