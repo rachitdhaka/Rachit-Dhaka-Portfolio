@@ -5,28 +5,34 @@ import { p } from "motion/react-client";
 import V0projectCard from "./V0projectCard";
 import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
-import paste from "../assets/Images/paste.png";
-import game from "../assets/Images/game.png";
-import HeikiBackground from "./HeikiBackground";
-import weather from "../assets/Images/weather.png";
-import chatbot from "../assets/chatbot application.png";
-import reactRef from "../assets/Images/ReactRef.png";
-import todo from "../assets/Images/todo.png";
 
+import pickpawz from "../assets/pickpawz.png"
+import todo from "../assets/Images/todo.png";
+import reactRef from "../assets/Images/ReactRef.png";
 const personalProjects = [
     {
         id: 1,
-        name: "Paste Application",
+        name: "Pick Pawz",
         detail:
-            "Paste Application - Save, edit, delete your notes, code and information",
-        logo: paste,
-        url: "https://paste-saving.vercel.app/",
-        techStack: ["React", "Tailwind", "Redux"],
-        githubUrl: "https://github.com/rachitdhaka/Paste-Application",
+            "Pet Adoption Platform - Connecting loving pets with caring homes",
+        logo: pickpawz,
+        url: "https://pick-pawz.vercel.app/",
+        techStack: ["React", "Tailwind", "Node ", "Express", "MongoDB"],
+        githubUrl: "https://github.com/rachitdhaka/PickPawz",
+    },
+    {
+        id: 2,
+        name: "React Ref Website",
+        detail:
+            "",
+        logo: reactRef,
+        url: "https://reactref.vercel.app/",
+        techStack: ["React", "Tailwind"],
+        githubUrl: "https://github.com/rachitdhaka/React-Ref",
     },
 
     {
-        id: 2,
+        id: 3,
         name: "Orbit Us",
         detail:
             "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
@@ -36,35 +42,17 @@ const personalProjects = [
         githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
     },
     {
-        id: 3,
+        id: 4,
         name: "Eth Link",
         detail:
             "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
         logo: ethlinkImg,
         url: "https://eth-link-vcpn.vercel.app/",
-        techStack: ["React", "Tailwind", "Solidity", "Web3" ],
+        techStack: ["React", "Tailwind", "Solidity", "Web3"],
         githubUrl: "https://github.com/rachitdhaka/EthLink",
     },
 
-    {
-        id: 4,
-        name: "Chat Bot Application",
-        detail:
-            "Chat Bot Application - Using Google AI to create a chat bot application",
-        logo: chatbot,
-        url: "https://chatbot-rachit.vercel.app/",
-        techStack: ["React", "Tailwind", "Api", "Google AI"],
-        githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
-    },
-    {
-        id: 5,
-        name: "React Ref Website",
-        detail: "",
-        logo: reactRef,
-        url: "https://reactref.vercel.app/",
-        techStack: ["React", "Tailwind"],
-        githubUrl: "https://github.com/rachitdhaka/React-Ref",
-    },
+
 ];
 
 const fullStack = [
@@ -74,8 +62,18 @@ const fullStack = [
         detail: "Todo Application using MERN",
         logo: todo,
         url: "https://todo-application-rachit.vercel.app/",
-        techStack: ["React", "Tailwind", "Node", "Express", "MongoDB" ],
+        techStack: ["React", "Tailwind", "Node", "Express", "MongoDB"],
         githubUrl: "https://github.com/rachitdhaka/Todo-Application",
+    },
+    {
+        id: 2,
+        name: "Pick Pawz",
+        detail:
+            "Pet Adoption Platform - Connecting loving pets with caring homes",
+        logo: pickpawz,
+        url: "https://pick-pawz.vercel.app/",
+        techStack: ["React", "Tailwind", "Node ", "Express", "MongoDB"],
+        githubUrl: "https://github.com/rachitdhaka/PickPawz",
     },
 
 ];
