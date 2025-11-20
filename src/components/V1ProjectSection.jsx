@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { NavLink } from "react-router-dom";
-import { p } from "motion/react-client";
 import V0projectCard from "./V0projectCard";
 import ethlinkImg from "../assets/Images/image.png";
 import orbitus from "../assets/Images/83262276-ed3d-4038-83e9-4798ff38811c.png";
@@ -66,7 +64,7 @@ const fullStack = [
         githubUrl: "https://github.com/rachitdhaka/Todo-Application",
     },
     {
-        id: 2,
+        id: 2   ,
         name: "Pick Pawz",
         detail:
             "Pet Adoption Platform - Connecting loving pets with caring homes",

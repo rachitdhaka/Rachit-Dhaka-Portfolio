@@ -160,7 +160,7 @@ const V1 = () => {
             <a
               href={resume}
               download="Rachit_Dhaka_Resume.pdf"
-              className="flex items-center gap-2 w-fit bg-neutral-900 text-white px-5 py-2.5 text-sm rounded-xl border border-neutral-800 hover:bg-neutral-800 transition-all duration-300 shadow-md"
+              className="flex items-center gap-2  w-fit bg-neutral-900 text-white px-5 py-2.5 text-sm rounded-xl border border-neutral-800 hover:bg-neutral-800 transition-all duration-300 shadow-md"
 
             >
               <FileText className="w-5 h-5" />
