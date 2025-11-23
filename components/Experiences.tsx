@@ -52,7 +52,7 @@ export const Experiences = () => {
           {/* Company Info */}
           <div className="flex-1 min-w-[120px]">
             <p className="text-white text-sm font-medium truncate">{experience.name}</p>
-            <p className="text-white/70 text-xs truncate">{experience.position}</p>
+            <p className="text-white/70 text-xs truncate ">{experience.position}</p>
           </div>
 
           {/* Date Range */}
