@@ -36,7 +36,7 @@ export const HeroSection = () => {
           sizes="150px"
         />
       </div>
-      <div className="md:ml-40 w-full md:w-77 text-center md:text-left">
+      <div className="md:ml-40 w-full md:w-full text-center md:text-left">
         <p className="text-lg sm:text-xl geist-regular text-neutral-900 dark:text-white tracking-tighter">
           Hi, I'm
         </p>
