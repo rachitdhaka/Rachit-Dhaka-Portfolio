@@ -93,14 +93,16 @@ export const ProjectSection = () => {
       <Heading>Projects</Heading>
 
       <div className="flex flex-col justify-center items-center">
-        <div className="grid grid-cols-2 gap-4 mx-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-2 w-full">
           {ProjectArray.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        <div className="flex justify-center items-center w-fit mt-5">
-          <Button variant={"secondary"}>Show All Projects</Button>
+        <div className="flex justify-center items-center w-full md:w-fit mt-5">
+          <Button variant={"secondary"} className="w-full md:w-auto">
+            Show All Projects
+          </Button>
         </div>
       </div>
     </div>
@@ -118,31 +120,42 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
             alt={`${project.name} Project Image`}
             width={1920}
             height={1080}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </a>
 
       <div className="">
-        <div className="px-4 py-2  dark:border-none ">
-          <div className="flex mb-2  justify-between">
-            <h3 className="text-xl py-1 font-bold">{project.name}</h3>
-            <div className="flex items-center gap-2">
+        <div className="px-3 md:px-4 py-2  dark:border-none ">
+          <div className="flex mb-2  justify-between items-start">
+            <h3 className="text-lg md:text-xl py-1 font-bold">
+              {project.name}
+            </h3>
+            <div className="flex items-center gap-2 shrink-0">
               <a href={project.url} target="_blank">
-                <Globe strokeWidth={1} size={20} />
+                <Globe
+                  className="w-5 h-5 md:w-5 md:h-5"
+                  strokeWidth={1}
+                  size={20}
+                />
               </a>
               <a href={project.githubUrl} target="_blank">
-                <Github strokeWidth={1} size={20} />
+                <Github
+                  className="w-5 h-5 md:w-5 md:h-5"
+                  strokeWidth={1}
+                  size={20}
+                />
               </a>
             </div>
           </div>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="mt-1 text-xs md:text-sm text-neutral-600 dark:text-neutral-400">
             {project.detail}
           </p>
         </div>
 
-        <div className="px-4 mb-5 flex flex-col gap-2">
-          <p className="text-neutral-400 text-sm">Technologies : </p>
-          <div className="flex gap-2 ">
+        <div className="px-3 md:px-4 mb-5 flex flex-col gap-2">
+          <p className="text-neutral-400 text-xs md:text-sm">Technologies : </p>
+          <div className="flex gap-2 flex-wrap">
             {project.techStack.map((tech) => {
               const iconMap: { [key: string]: React.ReactNode } = {
                 React: <ReactIcon />,
@@ -157,7 +170,7 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
                 TypeScript: <TypeScript />,
               };
               return (
-                <div key={tech} className="size-6">
+                <div key={tech} className="size-5 md:size-6">
                   {iconMap[tech] || null}
                 </div>
               );

@@ -17,7 +17,7 @@ export const Github = () => {
       <div>
         <Heading>Github Contribution</Heading>
       </div>
-      <div className="p-4 border border-dashed border-gray-200 dark:border-neutral-700 rounded-lg ">
+      <div className="p-2 md:p-4 border border-dashed border-gray-200 dark:border-neutral-700 rounded-lg overflow-x-auto">
         <GitHubCalendar
           username="rachitdhaka"
           blockSize={9}
@@ -30,7 +30,9 @@ export const Github = () => {
       </div>
 
       <div className="flex justify-center mt-4">
-        <Button variant={"ghost"} className="cursor-pointer">Github Link</Button>
+        <Button variant={"ghost"} className="cursor-pointer w-full sm:w-auto">
+          Github Link
+        </Button>
       </div>
     </div>
   );

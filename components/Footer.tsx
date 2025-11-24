@@ -1,15 +1,13 @@
 "use client";
-import { Code, Github, Linkedin,  Twitter ,MoveDown } from "lucide-react";
+import { Code, Github, Linkedin, Twitter, MoveDown } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-  
 } from "@/components/ui/tooltip";
 
 export const Footer = () => {
-
   const socialLinks = [
     {
       name: "Twitter",
@@ -35,8 +33,8 @@ export const Footer = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 mt-10">
-      <p className="text-center">Connect with me</p>
-      <div className="flex gap-3 pt-2 justify-center">
+      <p className="text-center text-sm md:text-base">Connect with me</p>
+      <div className="flex gap-4 md:gap-3 pt-2 justify-center">
         <TooltipProvider>
           {socialLinks.map((link) => (
             <Tooltip key={link.name}>
@@ -48,11 +46,14 @@ export const Footer = () => {
                   className="hover:opacity-70 transition-opacity cursor-pointer"
                   aria-label={link.name}
                 >
-                  <link.Icon size={24} strokeWidth={1} />
+                  <link.Icon
+                    className="w-5 h-5 md:w-6 md:h-6"
+                    size={24}
+                    strokeWidth={1}
+                  />
                 </a>
               </TooltipTrigger>
               <TooltipContent side="bottom">
-                
                 <p>{link.name}</p>
               </TooltipContent>
             </Tooltip>
