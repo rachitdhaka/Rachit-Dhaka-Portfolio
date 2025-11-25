@@ -12,7 +12,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center py-4 px-2">
+    <div className="  flex justify-between items-center py-4 px-2 ">
       <div>
         <p className="text-md tracking-tight cursor-pointer">rd</p>
       </div>

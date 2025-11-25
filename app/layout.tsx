@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   title: "Rachit Dhaka",
   description:
     "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
-  icons: {
-    icon: "/Images/dp.jpg",
-  },
 };
 
 export default function RootLayout({

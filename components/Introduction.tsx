@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import gfg from "@/public/Images/gfg.png";
 import { Tooltip } from "@/components/ui/tooltip-card";
-
+import { ModeToggle } from "./Mode-toggle";
 export const Introduction = () => {
   return (
     <div className="py-4 px-2 tracking-wide text-sm md:text-base">
+      
       <div>
         I'm a Full Stack Developer and Mentor{" "}
         <Tooltip
