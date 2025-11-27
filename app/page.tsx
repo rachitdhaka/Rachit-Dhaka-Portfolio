@@ -12,6 +12,7 @@ import Image from "next/image";
 import { SkillsAbout } from "@/components/Skills&About";
 import { Experiences } from "@/components/Experiences";
 import { Footer } from "@/components/Footer";
+import { Hackthon } from "@/components/Hackthon";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <Github/>
         <SkillsAbout />
         <Experiences/>
+        <Hackthon/>
         <Footer/>
       </Container>
     </TracingBeam>

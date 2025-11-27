@@ -2,7 +2,6 @@
 import React from "react";
 import { Heading } from "./ui/Heading";
 import Image from "next/image";
-import PickPawz from "@/public/Images/PickPawz.png";
 import { Globe, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // import technologies icons
@@ -15,11 +14,14 @@ import MongoDB from "@/Technologie/MongoDB";
 import Shadcn from "@/Technologie/Shadcn";
 import { Solidity } from "@/Technologie/Solidity";
 import TypeScript from "@/Technologie/TypeScript";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
 // importing all the images
-import ethlink from "@/public/Images/Ethlink.png";
-import orbitus from "@/public/Images/Orbitus.png";
-import ReactRef from "@/public/Images/ReactRef.png";
-import Todo from "@/public/Images/Todo.png";
+import ethlink from "@/public/ProjectImages/Ethlink.png";
+import orbitus from "@/public/ProjectImages/Orbitus.png";
+import ReactRef from "@/public/ProjectImages/ReactRef.png";
+import Todo from "@/public/ProjectImages/Todo.png";
+import PickPawz from "@/public/ProjectImages/PickPawz.png";
 const ProjectArray = [
   {
     id: 1,
@@ -40,36 +42,6 @@ const ProjectArray = [
   },
   {
     id: 2,
-    name: "React Ref Website",
-    detail: "",
-    thumbanail: ReactRef,
-    url: "https://reactref.vercel.app/",
-    techStack: ["JavaScript", "React", "Tailwind"],
-    githubUrl: "https://github.com/rachitdhaka/React-Ref",
-  },
-
-  {
-    id: 3,
-    name: "Orbit Us",
-    detail:
-      "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
-    thumbanail: orbitus,
-    url: "https://orbitus.vercel.app/",
-    techStack: ["JavaScript", "React", "Tailwind", "Solidity"],
-    githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
-  },
-  {
-    id: 4,
-    name: "Eth Link",
-    detail:
-      "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
-    thumbanail: ethlink,
-    url: "https://eth-link-vcpn.vercel.app/",
-    techStack: ["JavaScript", "React", "Tailwind", "Solidity", "Web3"],
-    githubUrl: "https://github.com/rachitdhaka/EthLink",
-  },
-  {
-    id: 5,
     name: "Todo Application",
     detail: "Todo Application using MERN",
     thumbanail: Todo,
@@ -84,6 +56,35 @@ const ProjectArray = [
       "Shadcn",
     ],
     githubUrl: "https://github.com/rachitdhaka/Todo-Application",
+  },
+  {
+    id: 3,
+    name: "React Ref Website",
+    detail: "",
+    thumbanail: ReactRef,
+    url: "https://reactref.vercel.app/",
+    techStack: ["JavaScript", "React", "Tailwind"],
+    githubUrl: "https://github.com/rachitdhaka/React-Ref",
+  },
+  {
+    id: 4,
+    name: "Orbit Us",
+    detail:
+      "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
+    thumbanail: orbitus,
+    url: "https://orbitus.vercel.app/",
+    techStack: ["JavaScript", "React", "Tailwind", "Solidity"],
+    githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
+  },
+  {
+    id: 5,
+    name: "Eth Link",
+    detail:
+      "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
+    thumbanail: ethlink,
+    url: "https://eth-link-vcpn.vercel.app/",
+    techStack: ["JavaScript", "React", "Tailwind", "Solidity", "Web3"],
+    githubUrl: "https://github.com/rachitdhaka/EthLink",
   },
 ];
 
@@ -111,7 +112,7 @@ export const ProjectSection = () => {
 
 const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
   return (
-    <div className=" h-full w-full overflow-hidden   border border-gray-200 dark:border-none dark:bg-neutral-900  shadow-none rounded-t-xl rounded-b-xl ">
+    <div className=" h-full w-full overflow-hidden   border border-gray-200 dark:border-none dark:bg-neutral-900  shadow-none rounded-t-xl rounded-b-xl hover:shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] transition-shadow duration-300">
       <a href={project.url} target="_blank">
         <div className=" aspect-video rounded-t-xl overflow-hidden">
           <Image
@@ -131,22 +132,40 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
             <h3 className="text-lg md:text-xl py-1 font-bold">
               {project.name}
             </h3>
-            <div className="flex items-center gap-2 shrink-0">
-              <a href={project.url} target="_blank">
-                <Globe
-                  className="w-5 h-5 md:w-5 md:h-5"
-                  strokeWidth={1}
-                  size={20}
-                />
-              </a>
-              <a href={project.githubUrl} target="_blank">
-                <Github
-                  className="w-5 h-5 md:w-5 md:h-5"
-                  strokeWidth={1}
-                  size={20}
-                />
-              </a>
-            </div>
+
+            <TooltipProvider>
+              <div className="flex items-center gap-2 shrink-0">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href={project.url} target="_blank">
+                      <Globe
+                        className="w-5 h-5 md:w-5 md:h-5"
+                        strokeWidth={1}
+                        size={20}
+                      />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Visit Website</p>
+                  </TooltipContent>
+                </Tooltip>
+
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a href={project.githubUrl} target="_blank">
+                      <Github
+                        className="w-5 h-5 md:w-5 md:h-5"
+                        strokeWidth={1}
+                        size={20}
+                      />
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>View on GitHub</p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
+            </TooltipProvider>
           </div>
           <p className="mt-1 text-xs md:text-sm text-neutral-600 dark:text-neutral-400">
             {project.detail}
