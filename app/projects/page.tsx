@@ -32,8 +32,7 @@ import weather from "@/public/ProjectImages/weather.png";
 import paste from "@/public/ProjectImages/paste.png";
 import chatbot from "@/public/ProjectImages/chatbot.png";
 
-export default function ProjectsPage() {
-  const ProjectArray = [
+const ProjectArray = [
     {
       id: 5,
       name: "Pick Pawz",
@@ -125,11 +124,12 @@ export default function ProjectsPage() {
       thumbnail: chatbot,
       url: "https://chatbot-rachit.vercel.app/",
       techStack: ["React", "Tailwind", "Api", "Google AI"],
-      githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
-    },
-  ];
-
-  return (
+        githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
+      },
+    ];
+  
+  export default function ProjectsPage() {
+    return (
     <Container>
       <Navbar />
 

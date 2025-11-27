@@ -107,9 +107,11 @@ export const ProjectSection = () => {
         </div>
 
         <div className="flex justify-center items-center w-full md:w-fit mt-5">
-          <Button variant={"secondary"} className="w-full md:w-auto">
-            Show All Projects
-          </Button>
+            <Link href="/projects" className="w-full md:w-fit">
+            <Button variant={"secondary"} className="w-full md:w-auto cursor-pointer">
+              Show All Projects
+            </Button>
+            </Link>
         </div>
       </div>
     </div>
