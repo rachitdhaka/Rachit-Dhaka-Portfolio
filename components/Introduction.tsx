@@ -3,11 +3,11 @@ import React from "react";
 import Image from "next/image";
 import gfg from "@/public/Images/gfg.png";
 import { Tooltip } from "@/components/ui/tooltip-card";
-import { ModeToggle } from "./Mode-toggle";
+import Link from 'next/link'
+
 export const Introduction = () => {
   return (
     <div className="py-4 px-2 tracking-wide text-sm md:text-base">
-      
       <div>
         I'm a Full Stack Developer and Mentor{" "}
         <Tooltip
@@ -15,13 +15,13 @@ export const Introduction = () => {
           content={<TooltipCard />}
         >
           {" "}
-          <a
+          <Link
             href="https://gfgsrmrmp.vercel.app/"
             target="/blank"
             className="underline text-base md:text-lg "
           >
             GeeksforGeeks SRM RMP
-          </a>
+          </Link>
         </Tooltip>
         , passionate about building impactful web experiences and solving
         challenges through DSA and creative problem-solving.

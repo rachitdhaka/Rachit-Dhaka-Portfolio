@@ -4,6 +4,7 @@ import { Heading } from "./ui/Heading";
 import Image from "next/image";
 import { Globe, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from 'next/link'
 // import technologies icons
 import JavaScript from "@/Technologie/JavaScript";
 import TailwindCss from "@/Technologie/TailwindCss";
@@ -14,7 +15,12 @@ import MongoDB from "@/Technologie/MongoDB";
 import Shadcn from "@/Technologie/Shadcn";
 import { Solidity } from "@/Technologie/Solidity";
 import TypeScript from "@/Technologie/TypeScript";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 // importing all the images
 import ethlink from "@/public/ProjectImages/Ethlink.png";
@@ -113,7 +119,7 @@ export const ProjectSection = () => {
 const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
   return (
     <div className=" h-full w-full overflow-hidden   border border-gray-200 dark:border-none dark:bg-neutral-900  shadow-none rounded-t-xl rounded-b-xl hover:shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)] transition-shadow duration-300">
-      <a href={project.url} target="_blank">
+      <Link href={project.url} target="_blank">
         <div className=" aspect-video rounded-t-xl overflow-hidden">
           <Image
             className="h-full w-full object-cover"
@@ -124,7 +130,7 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-      </a>
+      </Link>
 
       <div className="">
         <div className="px-3 md:px-4 py-2  dark:border-none ">
@@ -137,13 +143,13 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
               <div className="flex items-center gap-2 shrink-0">
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <a href={project.url} target="_blank">
+                    <Link href={project.url} target="_blank">
                       <Globe
                         className="w-5 h-5 md:w-5 md:h-5"
                         strokeWidth={1}
                         size={20}
                       />
-                    </a>
+                    </Link>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>Visit Website</p>
@@ -152,13 +158,13 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
 
                 <Tooltip>
                   <TooltipTrigger asChild>
-                    <a href={project.githubUrl} target="_blank">
+                    <Link href={project.githubUrl} target="_blank">
                       <Github
                         className="w-5 h-5 md:w-5 md:h-5"
                         strokeWidth={1}
                         size={20}
                       />
-                    </a>
+                    </Link>
                   </TooltipTrigger>
                   <TooltipContent>
                     <p>View on GitHub</p>

@@ -6,6 +6,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Link from 'next/link'
 
 export const Footer = () => {
   const socialLinks = [
@@ -39,7 +40,7 @@ export const Footer = () => {
           {socialLinks.map((link) => (
             <Tooltip key={link.name}>
               <TooltipTrigger asChild>
-                <a
+                <Link
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -51,7 +52,7 @@ export const Footer = () => {
                     size={24}
                     strokeWidth={1}
                   />
-                </a>
+                </Link>
               </TooltipTrigger>
               <TooltipContent side="bottom">
                 <p>{link.name}</p>
