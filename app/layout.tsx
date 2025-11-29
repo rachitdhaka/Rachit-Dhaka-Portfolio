@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { ThemeProvider } from "@/Providers/Theme-providers";
+import { ThemeShortcutListener } from "@/components/ThemeShortcutListener";
 export const metadata: Metadata = {
   title: "Rachit Dhaka",
   description:
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ThemeShortcutListener />
           {children}
         </ThemeProvider>
       </body>
