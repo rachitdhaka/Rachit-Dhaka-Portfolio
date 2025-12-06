@@ -4,17 +4,18 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { ThemeProvider } from "@/Providers/Theme-providers";
 import { ThemeShortcutListener } from "@/components/ThemeShortcutListener";
-import ogImg from "@/public/Images/OgImage.jpg"
-
+import ogImg from "@/public/Images/OgImage.jpg";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rachitdhaka.me"),
   title: "Rachit Dhaka",
   description:
     "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
-  
-   openGraph: {
+
+  openGraph: {
     title: "Rachit Dhaka Portfolio",
-    description: "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
+    description:
+      "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
     url: "https://rachitdhaka.me",
     siteName: "Rachit Dhaka Portfolio",
     images: [
@@ -30,17 +31,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rachit Dhaka Portfolio",
-    description: "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
+    description:
+      "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
     images: [ogImg.src],
   },
 };
-
-
-
-
-
-
-
 
 export default function RootLayout({
   children,
