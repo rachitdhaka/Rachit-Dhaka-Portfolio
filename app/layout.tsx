@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/Providers/Theme-providers";
 import { ThemeShortcutListener } from "@/components/ThemeShortcutListener";
 import ogImg from "@/public/Images/OgImage.jpg";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rachitdhaka.me"),
@@ -45,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
         style={{ fontWeight: 400 }}
       >
         <ThemeProvider
