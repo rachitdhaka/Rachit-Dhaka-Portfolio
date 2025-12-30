@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://rachitdhaka.me"),
   title: "Rachit Dhaka",
   description:
-    "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
+    "Full-stack developer crafting modern web applications with cutting-edge technologies. Explore my portfolio showcasing innovative projects and connect for collaboration opportunities.",
 
   openGraph: {
     title: "Rachit Dhaka Portfolio",
     description:
-      "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
+      "Full-stack developer crafting modern web applications with cutting-edge technologies. Explore my portfolio showcasing innovative projects and connect for collaboration opportunities.",
     url: "https://rachitdhaka.me",
     siteName: "Rachit Dhaka Portfolio",
     images: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rachit Dhaka Portfolio",
     description:
-      "Rachit Dhaka's personal website showcasing projects, blog posts, and contact information.",
+      "Full-stack developer crafting modern web applications with cutting-edge technologies. Explore my portfolio showcasing innovative projects and connect for collaboration opportunities.",
     images: [ogImg.src],
   },
 };
