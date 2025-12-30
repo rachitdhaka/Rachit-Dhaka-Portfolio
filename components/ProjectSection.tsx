@@ -25,7 +25,7 @@ import {
 // importing all the images
 import ethlink from "@/public/ProjectImages/Ethlink.png";
 import orbitus from "@/public/ProjectImages/Orbitus.png";
-import ReactRef from "@/public/ProjectImages/ReactRef.png";
+import DevRef from "@/public/Images/DevRef.webp"
 import Todo from "@/public/ProjectImages/Todo.png";
 import PickPawz from "@/public/ProjectImages/PickPawz.png";
 const ProjectArray = [
@@ -65,12 +65,12 @@ const ProjectArray = [
   },
   {
     id: 3,
-    name: "React Ref Website",
+    name: "Dev Ref Website",
     detail: "",
-    thumbanail: ReactRef,
-    url: "https://reactref.vercel.app/",
-    techStack: ["JavaScript", "React", "Tailwind"],
-    githubUrl: "https://github.com/rachitdhaka/React-Ref",
+    thumbanail: DevRef,
+    url: "https://devs-ref.vercel.app/",
+    techStack: ["TypeScript", "React", "Tailwind" , "Motion"],
+    githubUrl: "https://github.com/rachitdhaka/DevRef",
   },
   {
     id: 4,
