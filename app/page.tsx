@@ -1,5 +1,5 @@
+"use client";
 import { Container } from "@/components/Container";
-
 import { HeroSection } from "@/components/HeroSection";
 import { Introduction } from "@/components/Introduction";
 import { ModeToggle } from "@/components/Mode-toggle";

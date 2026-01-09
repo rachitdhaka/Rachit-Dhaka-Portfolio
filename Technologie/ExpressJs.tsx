@@ -1,3 +1,4 @@
+"use client";
 export default function ExpressJs() {
   return (
     <svg fill="currentColor" viewBox="0 0 128 128">

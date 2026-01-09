@@ -1,3 +1,5 @@
+"use client";
+
 export default function JavaScript() {
   return (
     <svg viewBox="0 0 128 128">
