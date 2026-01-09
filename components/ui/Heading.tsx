@@ -1,11 +1,18 @@
-"use client"
-import React from "react"
+"use client";
+import React, { memo } from "react";
+import { cn } from "@/lib/utils";
 
-export const Heading = ({children , className} :{
-    children : React.ReactNode;
-    className?: String;
-}) => {
-  return (
-    <p className={("text-2xl mb-10 font-medium ")}>{children}</p>
-  )
-}
+export const Heading = memo(
+  ({
+    children,
+    className,
+  }: {
+    children: React.ReactNode;
+    className?: string;
+  }) => {
+    return (
+      <p className={cn("text-2xl mb-10 font-medium", className)}>{children}</p>
+    );
+  }
+);
+Heading.displayName = "Heading";

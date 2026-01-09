@@ -1,15 +1,16 @@
 "use client";
-import React from "react";
+import React, { memo, useCallback } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Fileicon from "@/public/IconSvg/Fileicon";
-export const ResumeSection = () => {
-  const handleGetInTouch = () => {
+
+export const ResumeSection = memo(() => {
+  const handleGetInTouch = useCallback(() => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
     });
-  };
+  }, []);
 
   return (
     <div className="py-4 px-2 flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
@@ -30,4 +31,5 @@ export const ResumeSection = () => {
       </Button>
     </div>
   );
-};
+});
+ResumeSection.displayName = "ResumeSection";
