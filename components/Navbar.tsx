@@ -1,14 +1,16 @@
 "use client";
 import React, { memo, useMemo } from "react";
-import { CodeXml, Github, BriefcaseBusiness } from "lucide-react";
 import Link from "next/link";
 import { ModeToggle } from "./Mode-toggle";
+import CodeXmlIcon from "@/components/ui/code-xml-icon";
+import GithubIcon from "@/components/ui/github-icon";
+import Stack3Icon from "@/components/ui/stack-3-icon";
 
 // Move static data outside component
 const navLinks = [
-  { name: "Projects", icon: BriefcaseBusiness, href: "/projects" },
-  { name: "Github", icon: Github, href: "https://github.com/rachitdhaka" },
-  { name: "Codolio", icon: CodeXml, href: "https://codolio.com/rachitdhaka" },
+  { name: "Projects", icon: Stack3Icon, href: "/projects" },
+  { name: "Github", icon: GithubIcon, href: "https://github.com/rachitdhaka" },
+  { name: "Codolio", icon: CodeXmlIcon, href: "https://codolio.com/rachitdhaka" },
 ] as const;
 
 // Memoized nav link item
@@ -28,7 +30,9 @@ export const Navbar = memo(() => {
   return (
     <div className="flex justify-between items-center py-4 px-2">
       <div>
-        <p className="text-md tracking-tight cursor-pointer">rd</p>
+        <Link href="/">
+          <p className="text-md tracking-tight cursor-pointer" >rd</p>
+        </Link>
       </div>
 
       <div className="flex justify-center items-center gap-3 md:gap-8">

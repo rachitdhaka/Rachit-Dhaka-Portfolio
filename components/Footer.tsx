@@ -1,6 +1,10 @@
 "use client";
 import React, { memo, useMemo } from "react";
-import { Code, Github, Linkedin, Twitter } from "lucide-react";
+import GithubIcon from "./ui/github-icon";
+import CodeXmlIcon from "./ui/code-xml-icon";
+import TwitterXIcon from "./ui/twitter-x-icon";
+import LinkedinIcon from "./ui/linkedin-icon";
+
 import {
   Tooltip,
   TooltipContent,
@@ -14,22 +18,22 @@ const socialLinks = [
   {
     name: "Twitter",
     href: "https://x.com/rachitdhaka_",
-    Icon: Twitter,
+    Icon: TwitterXIcon,
   },
   {
     name: "GitHub",
     href: "https://github.com/rachitdhaka",
-    Icon: Github,
+    Icon: GithubIcon,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/rachitdhaka/",
-    Icon: Linkedin,
+    Icon: LinkedinIcon,
   },
   {
     name: "Codolio",
     href: "https://codolio.com/profile/rachitdhaka",
-    Icon: Code,
+    Icon:   CodeXmlIcon,
   },
 ] as const;
 
