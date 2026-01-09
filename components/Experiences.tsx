@@ -12,6 +12,7 @@ const experienceData = [
     id: 1,
     name: "GeeksForGeeks SRM RMP",
     position: "Core Member - Head of Operations",
+    link: "https://gfgsrmrmp.vercel.app/",
     logo: gfg,
     sd: "Aug 2024",
     ed: "Apr 2025",
@@ -20,6 +21,7 @@ const experienceData = [
     id: 2,
     name: "Vartalaap Podcast",
     position: "Host & Co-Founder",
+    link: "https://www.youtube.com/@Vartalaap-Podcast",
     logo: vp,
     sd: "Dec 2023",
     ed: "Mar 2024",
@@ -52,9 +54,20 @@ const ExperienceItem = memo(
 
       {/* Company Info */}
       <div className="flex-1 min-w-[120px]">
-        <p className="text-black dark:text-white text-sm font-medium truncate">
-          {experience.name}
-        </p>
+        {"link" in experience ? (
+          <a
+            href={experience.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black dark:text-white text-sm font-medium truncate hover:underline cursor-pointer block"
+          >
+            {experience.name}
+          </a>
+        ) : (
+          <p className="text-black dark:text-white text-sm font-medium truncate">
+            {experience.name}
+          </p>
+        )}
         <p className="dark:text-white/70 text-neutral-900 text-xs truncate">
           {experience.position}
         </p>
