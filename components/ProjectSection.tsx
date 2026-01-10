@@ -48,34 +48,25 @@ const ProjectArray = [
     ],
     githubUrl: "https://github.com/rachitdhaka/PickPawz",
   },
+
   {
     id: 2,
-    name: "Todo Application",
-    detail: "Todo Application using MERN",
-    thumbanail: Todo,
-    url: "https://todo-application-rachit.vercel.app/",
-    techStack: [
-      "JavaScript",
-      "React",
-      "Tailwind",
-      "Express",
-      "MongoDB",
-      "Motion",
-      "Shadcn",
-    ],
-    githubUrl: "https://github.com/rachitdhaka/Todo-Application",
-  },
-  {
-    id: 3,
     name: "Dev Ref Website",
     detail: "",
     thumbanail: DevRef,
-    url: "https://devs-ref.vercel.app/",
-    techStack: ["TypeScript", "React", "Tailwind", "Motion"],
-    githubUrl: "https://github.com/rachitdhaka/DevRef",
+    url: "https://devsref.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Motion",
+      "Express",
+      "MongoDB",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/DevRef-Project",
   },
   {
-    id: 4,
+    id: 3,
     name: "Orbit Us",
     detail:
       "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
@@ -85,7 +76,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
   },
   {
-    id: 5,
+    id: 4,
     name: "Eth Link",
     detail:
       "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
