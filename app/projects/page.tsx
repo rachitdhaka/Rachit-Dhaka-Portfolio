@@ -26,7 +26,7 @@ import {
 
 import ethlink from "@/public/ProjectImages/Ethlink.png";
 import orbitus from "@/public/ProjectImages/Orbitus.png";
-import ReactRef from "@/public/ProjectImages/ReactRef.png";
+import DevRef from "@/public/ProjectImages/ReactRef.png";
 import Todo from "@/public/ProjectImages/Todo.png";
 import PickPawz from "@/public/ProjectImages/PickPawz.png";
 import weather from "@/public/ProjectImages/weather.png";
@@ -34,103 +34,109 @@ import paste from "@/public/ProjectImages/paste.png";
 import chatbot from "@/public/ProjectImages/chatbot.png";
 
 const ProjectArray = [
-    {
-      id: 5,
-      name: "Pick Pawz",
-      detail:
-        "Pet Adoption Platform - Connecting loving pets with caring homes",
-      thumbnail: PickPawz,
-      url: "https://pick-pawz.vercel.app/",
-      techStack: [
-        "TypeScript",
-        "React",
-        "Tailwind",
-        "Express",
-        "MongoDB",
-        "Motion",
-        "Shadcn",
-      ],
-      githubUrl: "https://github.com/rachitdhaka/PickPawz",
-    },
-    {
-      id: 8,
-      name: "Todo Application",
-      detail: "Todo Application using MERN",
-      thumbnail: Todo,
-      url: "https://todo-application-rachit.vercel.app/",
-      techStack: [
-        "JavaScript",
-        "React",
-        "Tailwind",
-        "Express",
-        "MongoDB",
-        "Motion",
-        "Shadcn",
-      ],
-      githubUrl: "https://github.com/rachitdhaka/Todo-Application",
-    },
-    {
-      id: 2,
-      name: "Orbit Us",
-      detail:
-        "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
-      thumbnail: orbitus,
-      url: "https://orbitus.vercel.app/",
-      techStack: ["React", "Tailwind", "Solidity", "Web3"],
-      githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
-    },
-    {
-      id: 3,
-      name: "React Ref Website",
-      detail: "",
-      thumbnail: ReactRef,
-      url: "https://reactref.vercel.app/",
-      techStack: ["React", "Tailwind"],
-      githubUrl: "https://github.com/rachitdhaka/React-Ref",
-    },
-    {
-      id: 1,
-      name: "Paste Application",
-      detail:
-        "Paste Application - Save, edit, delete your notes, code and information",
-      thumbnail: paste,
-      url: "https://paste-saving.vercel.app/",
-      techStack: ["React", "Tailwind", "Redux"],
-      githubUrl: "https://github.com/rachitdhaka/Paste-Application",
-    },
-    {
-      id: 4,
-      name: "Eth Link",
-      detail:
-        "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
-      thumbnail: ethlink,
-      url: "https://eth-link-vcpn.vercel.app/",
-      techStack: ["React", "Tailwind", "Solidity", "Web3"],
-      githubUrl: "https://github.com/rachitdhaka/EthLink",
-    },
-    {
-      id: 6,
-      name: "Weather App",
-      detail: "Weather App - Get the current weather of any city in the world",
-      thumbnail: weather,
-      url: "https://weather-rachit.vercel.app/",
-      techStack: ["React", "Tailwind", "Api"],
-      githubUrl: "https://github.com/rachitdhaka/Weather-Application",
-    },
-    {
-      id: 7,
-      name: "Chat Bot Application",
-      detail:
-        "Chat Bot Application - Using Google AI to create a chat bot application",
-      thumbnail: chatbot,
-      url: "https://chatbot-rachit.vercel.app/",
-      techStack: ["React", "Tailwind", "Api", "Google AI"],
-        githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
-      },
-    ];
-  
-  export default function ProjectsPage() {
-    return (
+  {
+    id: 1,
+    name: "Pick Pawz",
+    detail: "Pet Adoption Platform - Connecting loving pets with caring homes",
+    thumbnail: PickPawz,
+    url: "https://pick-pawz.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Express",
+      "MongoDB",
+      "Motion",
+      "Shadcn",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/PickPawz",
+  },
+  {
+    id: 2,
+    name: "Todo Application",
+    detail: "Todo Application using MERN",
+    thumbnail: Todo,
+    url: "https://todo-application-rachit.vercel.app/",
+    techStack: [
+      "JavaScript",
+      "React",
+      "Tailwind",
+      "Express",
+      "MongoDB",
+      "Motion",
+      "Shadcn",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/Todo-Application",
+  },
+  {
+    id: 3,
+    name: "Dev Ref Website",
+    detail: "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
+    thumbnail: DevRef,
+    url: "https://devsref.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Motion",
+      "Express",
+      "MongoDB",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/DevRef-Project",
+  },
+  {
+    id: 4,
+    name: "Orbit Us",
+    detail:
+      "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
+    thumbnail: orbitus,
+    url: "https://orbitus.vercel.app/",
+    techStack: ["React", "Tailwind", "Solidity", "Web3"],
+    githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
+  },
+  {
+    id: 5,
+    name: "Paste Application",
+    detail:
+      "Paste Application - Save, edit, delete your notes, code and information",
+    thumbnail: paste,
+    url: "https://paste-saving.vercel.app/",
+    techStack: ["React", "Tailwind", "Redux"],
+    githubUrl: "https://github.com/rachitdhaka/Paste-Application",
+  },
+  {
+    id: 6,
+    name: "Eth Link",
+    detail:
+      "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
+    thumbnail: ethlink,
+    url: "https://eth-link-vcpn.vercel.app/",
+    techStack: ["React", "Tailwind", "Solidity", "Web3"],
+    githubUrl: "https://github.com/rachitdhaka/EthLink",
+  },
+  {
+    id: 7,
+    name: "Weather App",
+    detail: "Weather App - Get the current weather of any city in the world",
+    thumbnail: weather,
+    url: "https://weather-rachit.vercel.app/",
+    techStack: ["React", "Tailwind", "Api"],
+    githubUrl: "https://github.com/rachitdhaka/Weather-Application",
+  },
+  {
+    id: 8,
+    name: "Chat Bot Application",
+    detail:
+      "Chat Bot Application - Using Google AI to create a chat bot application",
+    thumbnail: chatbot,
+    url: "https://chatbot-rachit.vercel.app/",
+    techStack: ["React", "Tailwind", "Api", "Google AI"],
+    githubUrl: "http://github.com/rachitdhaka/Chat-Bot-Application",
+  },
+];
+
+export default function ProjectsPage() {
+  return (
     <Container>
       <Navbar />
 

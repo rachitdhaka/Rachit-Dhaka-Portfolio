@@ -52,7 +52,7 @@ const ProjectArray = [
   {
     id: 2,
     name: "Dev Ref Website",
-    detail: "",
+    detail: "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
     thumbanail: DevRef,
     url: "https://devsref.vercel.app/",
     techStack: [
