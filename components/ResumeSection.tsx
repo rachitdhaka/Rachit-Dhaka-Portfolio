@@ -3,6 +3,7 @@ import React, { memo, useCallback } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Fileicon from "@/public/IconSvg/Fileicon";
+import FileDescriptionIcon from "./ui/file-description-icon";
 
 export const ResumeSection = memo(() => {
   const handleGetInTouch = useCallback(() => {
@@ -14,11 +15,9 @@ export const ResumeSection = memo(() => {
 
   return (
     <div className="py-4 px-2 flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-      <Button className="cursor-pointer w-full sm:w-auto group" asChild>
+      <Button className="cursor-pointer w-full sm:w-auto " asChild>
         <Link href="/Documents/Resume.pdf" download="Rachit_Dhaka_Resume.pdf">
-          <div className="hidden group-hover:block transition-all duration-300 ease-in-out">
-            <Fileicon />
-          </div>
+          <FileDescriptionIcon/>
           Resume
         </Link>
       </Button>
@@ -27,6 +26,7 @@ export const ResumeSection = memo(() => {
         variant="secondary"
         onClick={handleGetInTouch}
       >
+        
         Get in Touch
       </Button>
     </div>
