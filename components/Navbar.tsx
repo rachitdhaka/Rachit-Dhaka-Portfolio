@@ -5,6 +5,7 @@ import { ModeToggle } from "./Mode-toggle";
 import CodeXmlIcon from "@/components/ui/code-xml-icon";
 import GithubIcon from "@/components/ui/github-icon";
 import Stack3Icon from "@/components/ui/stack-3-icon";
+import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 
 // Move static data outside component
 const navLinks = [
@@ -37,7 +38,7 @@ export const Navbar = memo(() => {
 
       <div className="flex justify-center items-center gap-3 md:gap-8">
         {navLinkItems}
-        <ModeToggle />
+        <AnimatedThemeToggler/>
       </div>
     </div>
   );
