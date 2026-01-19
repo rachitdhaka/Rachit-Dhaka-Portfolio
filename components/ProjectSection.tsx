@@ -28,11 +28,29 @@ import orbitus from "@/public/ProjectImages/Orbitus.png";
 import DevRef from "@/public/Images/DevRef.webp";
 import Todo from "@/public/ProjectImages/Todo.png";
 import PickPawz from "@/public/ProjectImages/PickPawz.png";
-
+import campus from "@/public/ProjectImages/campusConnection.png"
 // Move static data outside component to prevent recreation
 const ProjectArray = [
   {
     id: 1,
+    name: "Campus Connections",
+    detail:
+      "Campus Connection Platform - Geospatial Alumni Networking Platform",
+    thumbanail: campus,
+    url: "https://campusconnections.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Express",
+      "MongoDB",
+      "Motion",
+      "Shadcn",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/CampusConnections---Client-",
+  },
+  {
+    id: 2,
     name: "Pick Pawz",
     detail: "Pet Adoption Platform - Connecting loving pets with caring homes",
     thumbanail: PickPawz,
@@ -48,11 +66,11 @@ const ProjectArray = [
     ],
     githubUrl: "https://github.com/rachitdhaka/PickPawz",
   },
-
   {
-    id: 2,
+    id: 3,
     name: "Dev Ref Website",
-    detail: "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
+    detail:
+      "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
     thumbanail: DevRef,
     url: "https://devsref.vercel.app/",
     techStack: [
@@ -66,7 +84,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/DevRef-Project",
   },
   {
-    id: 3,
+    id: 4,
     name: "Orbit Us",
     detail:
       "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
@@ -76,7 +94,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
   },
   {
-    id: 4,
+    id: 5,
     name: "Eth Link",
     detail:
       "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
@@ -186,7 +204,7 @@ const ProjectCard = memo(
         </div>
       </div>
     );
-  }
+  },
 );
 ProjectCard.displayName = "ProjectCard";
 
@@ -197,7 +215,7 @@ export const ProjectSection = memo(() => {
       ProjectArray.map((project) => (
         <ProjectCard key={project.id} project={project} />
       )),
-    []
+    [],
   );
 
   return (
