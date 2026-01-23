@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/Providers/Theme-providers";
 import { ThemeShortcutListener } from "@/components/ThemeShortcutListener";
 import ogImg from "@/public/Images/OgImage.jpg";
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 
@@ -57,6 +58,7 @@ export default function RootLayout({
         >
           <ThemeShortcutListener />
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
