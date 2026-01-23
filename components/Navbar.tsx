@@ -11,7 +11,7 @@ import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 const navLinks = [
   { name: "Projects", icon: Stack3Icon, href: "/projects" },
   { name: "Github", icon: GithubIcon, href: "https://github.com/rachitdhaka" },
-  { name: "Codolio", icon: CodeXmlIcon, href: "https://codolio.com/rachitdhaka" },
+  { name: "Codolio", icon: CodeXmlIcon, href: "https://codolio.com/profile/rachitdhaka" },
 ] as const;
 
 // Memoized nav link item
