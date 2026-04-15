@@ -15,6 +15,7 @@ import MongoDB from "@/Technologie/MongoDB";
 import Shadcn from "@/Technologie/Shadcn";
 import { Solidity } from "@/Technologie/Solidity";
 import TypeScript from "@/Technologie/TypeScript";
+import Vercel from "@/Technologie/Vercel";
 import {
   Tooltip,
   TooltipContent,
@@ -28,7 +29,8 @@ import orbitus from "@/public/ProjectImages/Orbitus.png";
 import DevRef from "@/public/Images/DevRef.webp";
 import Todo from "@/public/ProjectImages/Todo.png";
 import PickPawz from "@/public/ProjectImages/PickPawz.png";
-import campus from "@/public/ProjectImages/campusConnection.png"
+import campus from "@/public/ProjectImages/campusConnection.png";
+import DsaTracker from "@/public/ProjectImages/og.png";
 // Move static data outside component to prevent recreation
 const ProjectArray = [
   {
@@ -51,23 +53,40 @@ const ProjectArray = [
   },
   {
     id: 2,
-    name: "Pick Pawz",
-    detail: "Pet Adoption Platform - Connecting loving pets with caring homes",
-    thumbanail: PickPawz,
-    url: "https://pick-pawz.vercel.app/",
+    name: "DSA Tracker",
+    detail:
+      "Intellectual Sanctuary - High-performance DSA problem tracker with sophisticated progress visualization and editorial design.",
+    thumbanail: DsaTracker,
+    url: "https://dsatracker-450babbar.vercel.app/",
     techStack: [
       "TypeScript",
       "React",
+      "Next.js",
       "Tailwind",
-      "Express",
-      "MongoDB",
-      "Motion",
-      "Shadcn",
+      
+      
     ],
-    githubUrl: "https://github.com/rachitdhaka/PickPawz",
+    githubUrl: "https://github.com/rachitdhaka/DsaTracker",
   },
+  // {
+  //   id: 3,
+  //   name: "Pick Pawz",
+  //   detail: "Pet Adoption Platform - Connecting loving pets with caring homes",
+  //   thumbanail: PickPawz,
+  //   url: "https://pick-pawz.vercel.app/",
+  //   techStack: [
+  //     "TypeScript",
+  //     "React",
+  //     "Tailwind",
+  //     "Express",
+  //     "MongoDB",
+  //     "Motion",
+  //     "Shadcn",
+  //   ],
+  //   githubUrl: "https://github.com/rachitdhaka/PickPawz",
+  // },
   {
-    id: 3,
+    id: 4,
     name: "Dev Ref Website",
     detail:
       "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
@@ -84,7 +103,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/DevRef-Project",
   },
   {
-    id: 4,
+    id: 5,
     name: "Orbit Us",
     detail:
       "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
@@ -94,7 +113,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
   },
   {
-    id: 5,
+    id: 6,
     name: "Eth Link",
     detail:
       "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
@@ -117,6 +136,7 @@ const iconMap: Record<string, React.ReactNode> = {
   Shadcn: <Shadcn />,
   Solidity: <Solidity />,
   TypeScript: <TypeScript />,
+  "Next.js": <Vercel />,
 };
 
 // Memoized TechIcon component

@@ -17,6 +17,7 @@ import MongoDB from "@/Technologie/MongoDB";
 import Shadcn from "@/Technologie/Shadcn";
 import { Solidity } from "@/Technologie/Solidity";
 import TypeScript from "@/Technologie/TypeScript";
+import Vercel from "@/Technologie/Vercel";
 import {
   Tooltip,
   TooltipContent,
@@ -32,10 +33,47 @@ import PickPawz from "@/public/ProjectImages/PickPawz.png";
 import weather from "@/public/ProjectImages/weather.png";
 import paste from "@/public/ProjectImages/paste.png";
 import chatbot from "@/public/ProjectImages/chatbot.png";
+import DsaTracker from "@/public/ProjectImages/og.png";
+import campus from "@/public/ProjectImages/campusConnection.png";
 
 const ProjectArray = [
   {
     id: 1,
+    name: "Campus Connections",
+    detail:
+      "Campus Connection Platform - Geospatial Alumni Networking Platform",
+    thumbnail: campus,
+    url: "https://campusconnections.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Tailwind",
+      "Express",
+      "MongoDB",
+      "Motion",
+      "Shadcn",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/CampusConnections---Client-",
+  },
+  {
+    id: 2,
+    name: "DSA Tracker",
+    detail:
+      "Intellectual Sanctuary - High-performance DSA problem tracker with sophisticated progress visualization and editorial design.",
+    thumbnail: DsaTracker,
+    url: "https://dsa-tracker-rachit.vercel.app/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Motion",
+      "Shadcn",
+    ],
+    githubUrl: "https://github.com/rachitdhaka/DSA-Tracker",
+  },
+  {
+    id: 3,
     name: "Pick Pawz",
     detail: "Pet Adoption Platform - Connecting loving pets with caring homes",
     thumbnail: PickPawz,
@@ -52,7 +90,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/PickPawz",
   },
   {
-    id: 2,
+    id: 4,
     name: "Todo Application",
     detail: "Todo Application using MERN",
     thumbnail: Todo,
@@ -69,7 +107,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Todo-Application",
   },
   {
-    id: 3,
+    id: 5,
     name: "Dev Ref Website",
     detail: "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
     thumbnail: DevRef,
@@ -85,7 +123,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/DevRef-Project",
   },
   {
-    id: 4,
+    id: 6,
     name: "Orbit Us",
     detail:
       "Decentralised Drop Servicing Platform - Finding Freelancing work and create Job for free lancer",
@@ -95,7 +133,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Drop-Service---Orbit-Us",
   },
   {
-    id: 5,
+    id: 7,
     name: "Paste Application",
     detail:
       "Paste Application - Save, edit, delete your notes, code and information",
@@ -105,7 +143,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Paste-Application",
   },
   {
-    id: 6,
+    id: 8,
     name: "Eth Link",
     detail:
       "Decentralised Job Seacrhing Portal - ETHLink leverages Web3 to offer a secure, trust-based job search platform with verified companies and candidates.",
@@ -115,7 +153,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/EthLink",
   },
   {
-    id: 7,
+    id: 9,
     name: "Weather App",
     detail: "Weather App - Get the current weather of any city in the world",
     thumbnail: weather,
@@ -124,7 +162,7 @@ const ProjectArray = [
     githubUrl: "https://github.com/rachitdhaka/Weather-Application",
   },
   {
-    id: 8,
+    id: 10,
     name: "Chat Bot Application",
     detail:
       "Chat Bot Application - Using Google AI to create a chat bot application",
@@ -238,6 +276,7 @@ const ProjectCard = ({ project }: { project: (typeof ProjectArray)[0] }) => {
                 Shadcn: <Shadcn />,
                 Solidity: <Solidity />,
                 TypeScript: <TypeScript />,
+                "Next.js": <Vercel />,
               };
               return (
                 <div key={tech} className="size-5 md:size-6">
