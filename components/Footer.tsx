@@ -5,6 +5,7 @@ import CodeXmlIcon from "./ui/code-xml-icon";
 import TwitterXIcon from "./ui/twitter-x-icon";
 import LinkedinIcon from "./ui/linkedin-icon";
 
+
 import {
   Tooltip,
   TooltipContent,
@@ -33,7 +34,7 @@ const socialLinks = [
   {
     name: "Codolio",
     href: "https://codolio.com/profile/rachitdhaka",
-    Icon:   CodeXmlIcon,
+    Icon: CodeXmlIcon,
   },
 ] as const;
 
@@ -65,11 +66,20 @@ SocialLink.displayName = "SocialLink";
 export const Footer = memo(() => {
   const socialLinkItems = useMemo(
     () => socialLinks.map((link) => <SocialLink key={link.name} link={link} />),
-    []
+    [],
   );
 
   return (
     <div className="container mx-auto px-4 py-8 mt-10">
+      <div>
+        <img
+          src="/signature.svg"
+          alt="signature"
+          className="mx-auto"
+          width={180}
+          height={80}
+        />
+      </div>
       <p className="text-center text-sm md:text-base">Connect with me</p>
       <div className="flex gap-4 md:gap-3 pt-2 justify-center">
         <TooltipProvider>{socialLinkItems}</TooltipProvider>
@@ -77,7 +87,9 @@ export const Footer = memo(() => {
 
       <div className="mt-10">
         <p className="text-sm text-center">
-          Design & Developed by Rachit Dhaka <br /> © 2025. All rights reserved.
+          Inspired from <a href="https://x.com/mannupaaji" target="_blank" rel="noopener noreferrer" className="underline">
+            Manu Arora
+          </a>
         </p>
       </div>
     </div>

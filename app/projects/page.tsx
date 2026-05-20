@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { Globe, Github } from "lucide-react";
-
 // Technolgies imports
 import JavaScript from "@/Technologie/JavaScript";
 import TailwindCss from "@/Technologie/TailwindCss";
@@ -109,7 +108,8 @@ const ProjectArray = [
   {
     id: 5,
     name: "Dev Ref Website",
-    detail: "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
+    detail:
+      "A zero-dependency library offering production-ready frontend components and backend boilerplates for direct integration.",
     thumbnail: DevRef,
     url: "https://devsref.vercel.app/",
     techStack: [
@@ -176,12 +176,6 @@ const ProjectArray = [
 export default function ProjectsPage() {
   return (
     <Container>
-      <Navbar />
-
-      <div className="mt-4">
-        <p className="p-4 text-center  text-2xl">All Projects</p>
-      </div>
-
       <div>
         <div className="px-2 py-4 mt-10 ">
           <Heading>Projects</Heading>

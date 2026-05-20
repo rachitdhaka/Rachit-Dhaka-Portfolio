@@ -1,6 +1,5 @@
 "use client";
 import { Container } from "@/components/Container";
-import { HeroSection } from "@/components/HeroSection";
 import { Introduction } from "@/components/Introduction";
 import { ModeToggle } from "@/components/Mode-toggle";
 import { Navbar } from "@/components/Navbar";
@@ -16,21 +15,15 @@ import { Hackthon } from "@/components/Hackthon";
 
 export default function Home() {
   return (
-    <TracingBeam>
-      <Container>
-        <Navbar />
-        <HeroSection />
-        <Introduction />
-        <ResumeSection />
-        <ProjectSection />
-        <Github/>
-        <SkillsAbout />
-        <Experiences/>
-        <Hackthon/>
-        <Footer/>
-      </Container>
-    </TracingBeam>
-    
-    
+    <Container>
+      <Introduction />
+      <ResumeSection />
+      <ProjectSection />
+      <Github />
+      <SkillsAbout />
+      <Experiences />
+      <Hackthon />
+      <Footer />
+    </Container>
   );
 }

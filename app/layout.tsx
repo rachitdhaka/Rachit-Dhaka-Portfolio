@@ -4,7 +4,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/Providers/Theme-providers";
 import { ThemeShortcutListener } from "@/components/ThemeShortcutListener";
 import ogImg from "@/public/Images/OgImage.jpg";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import { Container } from "@/components/Container";
+import Section from "@/components/Section";
+import { HeroSection } from "@/components/HeroSection";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-geist-sans" });
 
@@ -57,6 +60,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ThemeShortcutListener />
+          <header>
+            <Container>
+              <HeroSection />
+              <Section />
+            </Container>
+          </header>
           {children}
           <Analytics />
         </ThemeProvider>
